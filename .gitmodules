@@ -1,0 +1,15 @@
+[submodule "api"]
+	path = api
+	url = git@github.com:fabiomdsdj/beleza-backend.git
+[submodule "admin"]
+	path = admin
+	url = git@github.com:fabiomdsdj/beleza-admin.git
+[submodule "master-admin"]
+	path = master-admin
+	url = git@github.com:fabiomdsdj/beleza-master-admin.git
+[submodule "white-label"]
+	path = white-label
+	url = git@github.com:fabiomdsdj/beleza-white-label.git
+[submodule "landing"]
+	path = landing
+	url = git@github.com:fabiomdsdj/suaagenda-landing.git
