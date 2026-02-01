@@ -40,12 +40,12 @@ node .output/server/index.mjs &
 cd ..
 
 ################################
-# Nuxt Blog
+# Nuxt Landing
 ################################
-echo "📰 Nuxt Blog (3004)"
-cd blog
+echo "📰 Nuxt Landing (3004)"
+cd landing
 PORT=3004 \
-NUXT_PUBLIC_APP=blog \
+NUXT_PUBLIC_APP=landing \
 node .output/server/index.mjs &
 cd ..
 
