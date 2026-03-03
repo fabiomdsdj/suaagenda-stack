@@ -11,19 +11,19 @@ FROM base AS deps
 # Criar diretórios antes de copiar
 RUN mkdir -p api admin master-admin white-label landing
 
-# Copiar package.json E package-lock.json de cada projeto
-COPY api/package*.json api/package-lock*.json ./api/
-COPY admin/package*.json admin/package-lock*.json ./admin/
-COPY master-admin/package*.json master-admin/package-lock*.json ./master-admin/
-COPY white-label/package*.json white-label/package-lock*.json ./white-label/
-COPY landing/package*.json landing/package-lock*.json ./landing/
+# Copiar package.json de cada projeto
+COPY api/package*.json ./api/
+COPY admin/package*.json ./admin/
+COPY master-admin/package*.json ./master-admin/
+COPY white-label/package*.json ./white-label/
+COPY landing/package*.json ./landing/
 
-# Instalar dependências (essa layer fica em CACHE!)
-RUN cd api && npm ci --omit=dev
-RUN cd admin && npm ci
-RUN cd master-admin && npm ci
-RUN cd white-label && npm ci
-RUN cd landing && npm ci
+# Instalar dependências usando npm install (funciona sem lock file)
+RUN cd api && npm install --omit=dev --no-package-lock
+RUN cd admin && npm install --no-package-lock
+RUN cd master-admin && npm install --no-package-lock
+RUN cd white-label && npm install --no-package-lock
+RUN cd landing && npm install --no-package-lock
 
 ################################
 # STAGE 2: Build dos projetos
