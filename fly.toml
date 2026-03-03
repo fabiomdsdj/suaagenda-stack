@@ -3,6 +3,12 @@ app = 'suaagenda-stack'
 primary_region = 'gru'
 
 [build]
+  [build.env]
+    NUXT_PUBLIC_API_BASE_URL = "https://api.suaagenda.link"
+    
+[env]
+  NODE_ENV = "production"
+  NUXT_PUBLIC_API_BASE_URL = "https://api.suaagenda.link"
 
 [http_service]
   internal_port = 80
