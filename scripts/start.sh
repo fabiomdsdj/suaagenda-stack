@@ -1,4 +1,5 @@
 #!/bin/sh
+#scripts/start.sh
 set -e
 
 echo "🚀 Iniciando serviços..."
