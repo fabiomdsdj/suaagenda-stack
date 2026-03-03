@@ -8,6 +8,9 @@ WORKDIR /app
 ################################
 FROM base AS deps
 
+# Criar diretórios antes de copiar
+RUN mkdir -p api admin master-admin white-label landing
+
 # Copiar APENAS package.json de cada projeto
 COPY api/package*.json ./api/
 COPY admin/package*.json ./admin/
