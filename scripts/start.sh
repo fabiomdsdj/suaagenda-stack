@@ -1,57 +1,40 @@
 #!/bin/sh
-#scripts/start.sh
 set -e
 
-echo "🚀 Iniciando serviços..."
+echo "🚀 Iniciando SuaAgenda Stack..."
 
 ################################
-# API (Node)
+# API (Node via start-all.js)
 ################################
-echo "🧠 API Node (3010)"
-PORT=3010 node api/server.js &
+echo "🧠 Iniciando API + Workers BullMQ..."
+node --max-old-space-size=384 /app/start-all.js &
 
 ################################
 # Nuxt Admin
 ################################
 echo "🎛️ Nuxt Admin (3001)"
-cd admin
-PORT=3001 \
-NUXT_PUBLIC_APP=admin \
-node .output/server/index.mjs &
-cd ..
+PORT=3001 NUXT_PUBLIC_APP=admin node /app/admin/.output/server/index.mjs &
 
 ################################
 # Nuxt Master Admin
 ################################
 echo "🛠️ Nuxt Master Admin (3002)"
-cd master-admin
-PORT=3002 \
-NUXT_PUBLIC_APP=master \
-node .output/server/index.mjs &
-cd ..
+PORT=3002 NUXT_PUBLIC_APP=master node /app/master-admin/.output/server/index.mjs &
 
 ################################
 # Nuxt White Label
 ################################
 echo "🏷️ Nuxt White Label (3003)"
-cd white-label
-PORT=3003 \
-NUXT_PUBLIC_APP=white \
-node .output/server/index.mjs &
-cd ..
+PORT=3003 NUXT_PUBLIC_APP=white node /app/white-label/.output/server/index.mjs &
 
 ################################
-# Nuxt Landing
+# Aguarda serviços subirem
 ################################
-echo "📰 Nuxt Landing (3004)"
-cd landing
-PORT=3004 \
-NUXT_PUBLIC_APP=landing \
-node .output/server/index.mjs &
-cd ..
+echo "⏳ Aguardando serviços..."
+sleep 5
 
 ################################
-# Nginx (porta 80)
+# Nginx (porta 80) — mantém processo vivo
 ################################
-echo "🌐 Nginx"
+echo "🌐 Nginx na porta 80"
 nginx -g "daemon off;"
