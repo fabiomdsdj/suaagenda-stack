@@ -1,4 +1,3 @@
-# .github/workflows/deploy-master.yml
 name: Deploy Master Admin
 
 on:
@@ -7,6 +6,7 @@ on:
     paths:
       - 'master-admin/**'
       - '.github/workflows/deploy-master.yml'
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -14,6 +14,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: superfly/flyctl-actions/setup-flyctl@master
-      - run: flyctl deploy --remote-only -a suaagenda-master
+      - name: Deploy
+        working-directory: master-admin
+        run: flyctl deploy --remote-only -a suaagenda-master
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
