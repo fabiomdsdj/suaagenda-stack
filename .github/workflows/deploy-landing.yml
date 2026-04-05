@@ -15,7 +15,6 @@ jobs:
       - uses: actions/checkout@v4
       - uses: superfly/flyctl-actions/setup-flyctl@master
       - name: Deploy
-        working-directory: landing
-        run: flyctl deploy --remote-only -a suaagenda-landing
+        run: flyctl deploy --remote-only -a suaagenda-landing --config landing/fly.toml
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}

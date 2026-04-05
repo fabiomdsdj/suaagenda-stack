@@ -15,7 +15,6 @@ jobs:
       - uses: actions/checkout@v4
       - uses: superfly/flyctl-actions/setup-flyctl@master
       - name: Deploy
-        working-directory: master-admin
-        run: flyctl deploy --remote-only -a suaagenda-master
+        run: flyctl deploy --remote-only -a suaagenda-master --config master-admin/fly.toml
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
