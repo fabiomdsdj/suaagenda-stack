@@ -1,0 +1,19 @@
+# .github/workflows/deploy-wl.yml
+name: Deploy White Label
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'white-label/**'
+      - '.github/workflows/deploy-wl.yml'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: superfly/flyctl-actions/setup-flyctl@master
+      - run: flyctl deploy --remote-only -a suaagenda-wl
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
