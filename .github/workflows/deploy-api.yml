@@ -14,7 +14,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: superfly/flyctl-actions/setup-flyctl@master
+      # deploy-api.yml
       - name: Deploy
-        run: flyctl deploy --remote-only -a suaagenda-api --dockerfile api/Dockerfile.api --config api/fly.toml
+        run: cd api && flyctl deploy --remote-only -a suaagenda-api --dockerfile Dockerfile.api
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}

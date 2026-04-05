@@ -14,7 +14,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: superfly/flyctl-actions/setup-flyctl@master
+      # deploy-wl.yml
       - name: Deploy
-        run: flyctl deploy --remote-only -a suaagenda-wl --config white-label/fly.toml
+        run: cd white-label && flyctl deploy --remote-only -a suaagenda-wl
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
