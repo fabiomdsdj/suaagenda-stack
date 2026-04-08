@@ -16,6 +16,6 @@ jobs:
       - uses: superfly/flyctl-actions/setup-flyctl@master
       # deploy-api.yml
       - name: Deploy
-        run: cd api && flyctl deploy --remote-only -a suaagenda-api --dockerfile Dockerfile.api
+        run: flyctl deploy --remote-only --config api/fly.api.toml
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
