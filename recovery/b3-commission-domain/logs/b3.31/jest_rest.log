@@ -1,0 +1,1962 @@
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+PASS __tests__/integration/commissionJob.test.js
+  ● Console
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B38_292092_3',
+        paymentId: 'pay_B38_292092_4',
+        tenantId: 1100,
+        salesAgentId: '6f3bf993-d7a0-45ff-88c5-f6d329eb1591',
+        salesAgentCommissionId: '79928e0f-f225-4d26-805c-5ce695109358',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B38_292092_3',
+        paymentId: 'pay_B38_292092_5',
+        tenantId: 1100,
+        salesAgentId: '6f3bf993-d7a0-45ff-88c5-f6d329eb1591',
+        salesAgentCommissionId: '79928e0f-f225-4d26-805c-5ce695109358',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 2,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lançamentos aprovados { flow: 'commission-approve', count: 2, totalAmount: '30.00' }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B38_292092_8',
+        paymentId: 'pay_B38_292092_9',
+        tenantId: 1101,
+        salesAgentId: '77c6e644-2af2-4b0a-87f0-6847cdd184ae',
+        salesAgentCommissionId: 'c792d833-b040-4777-8b01-66ae169e1fd4',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lançamentos aprovados { flow: 'commission-approve', count: 1, totalAmount: '10.00' }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B38_292092_12',
+        paymentId: 'pay_B38_292092_13',
+        tenantId: 1102,
+        salesAgentId: '6f7c3670-3d03-432d-b7ea-2e33e9d30832',
+        salesAgentCommissionId: '3fb266db-ffbe-420f-b657-6d4d09f8840b',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lançamentos aprovados { flow: 'commission-approve', count: 1, totalAmount: '10.00' }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B38_292092_16',
+        paymentId: 'pay_B38_292092_17',
+        tenantId: 1103,
+        salesAgentId: '91ebbb14-11b6-4e20-b681-0e3eb16ec7cf',
+        salesAgentCommissionId: '0229d15c-a070-4937-82ce-7f28cea28ad1',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B38_292092_20',
+        paymentId: 'pay_B38_292092_21',
+        tenantId: 1104,
+        salesAgentId: 'f1b8c688-2190-4e3e-b178-c3d9bd3a71b5',
+        salesAgentCommissionId: 'a1760cf9-510d-4e33-8418-aceab7c5d9e7',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B38_292092_24',
+        paymentId: 'pay_B38_292092_25',
+        tenantId: 1105,
+        salesAgentId: '539af233-5ab9-499d-8aa0-49f1fba05b8d',
+        salesAgentCommissionId: '47175c69-6fa4-453b-aba0-312855ffaf81',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lançamentos aprovados { flow: 'commission-approve', count: 1, totalAmount: '30.00' }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lote de repasse fechado {
+        flow: 'commission-payout',
+        batchId: 'PB-20260922-579e6c528daa',
+        count: 1,
+        totalAmount: '30.00'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B38_292092_28',
+        paymentId: 'pay_B38_292092_29',
+        tenantId: 1106,
+        salesAgentId: 'faafcd50-0736-457c-8508-91363621b025',
+        salesAgentCommissionId: '2d0e2c49-02bf-48cb-8438-ea8e97b4e85f',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lançamentos aprovados { flow: 'commission-approve', count: 1, totalAmount: '10.00' }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lote de repasse fechado {
+        flow: 'commission-payout',
+        batchId: 'PB-20260922-e4016b4c4de8',
+        count: 1,
+        totalAmount: '10.00'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B38_292092_32',
+        paymentId: 'pay_B38_292092_33',
+        tenantId: 1107,
+        salesAgentId: 'a4a3cde8-22e9-4cda-a5cc-9d4813d431b1',
+        salesAgentCommissionId: '98b6f9d6-72db-4e96-a7e0-d1d96ff3e34c',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lançamentos aprovados { flow: 'commission-approve', count: 1, totalAmount: '10.00' }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lote de repasse fechado {
+        flow: 'commission-payout',
+        batchId: 'PB-20260922-dc2eac7b4e53',
+        count: 1,
+        totalAmount: '10.00'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B38_292092_36',
+        paymentId: 'pay_B38_292092_37',
+        tenantId: 1108,
+        salesAgentId: 'a199e877-775d-4641-879a-b60f30b52236',
+        salesAgentCommissionId: '911d75b4-3ce4-4a12-8950-ab552a3c590f',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B38_292092_36',
+        paymentId: 'pay_B38_292092_38',
+        tenantId: 1108,
+        salesAgentId: 'a199e877-775d-4641-879a-b60f30b52236',
+        salesAgentCommissionId: '911d75b4-3ce4-4a12-8950-ab552a3c590f',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 2,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão estornada {
+        subscriptionId: 'sub_B38_292092_36',
+        paymentId: 'pay_B38_292092_37',
+        flow: 'refund',
+        tenantId: 1108,
+        credits: 1,
+        reversals: 1
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lançamentos aprovados { flow: 'commission-approve', count: 1, totalAmount: '20.00' }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B38_292092_41',
+        paymentId: 'pay_B38_292092_42',
+        tenantId: 1109,
+        salesAgentId: 'd73bb978-6a4c-4da4-91c9-fd7247615f14',
+        salesAgentCommissionId: '3cb606c7-f271-4151-9db0-4152dbe55c7b',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão estornada {
+        subscriptionId: 'sub_B38_292092_41',
+        paymentId: 'pay_B38_292092_42',
+        flow: 'refund',
+        tenantId: 1109,
+        credits: 1,
+        reversals: 1
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B38_292092_45',
+        paymentId: 'pay_B38_292092_46',
+        tenantId: 1110,
+        salesAgentId: 'aad0469e-3411-4242-90e8-11ff30d6950d',
+        salesAgentCommissionId: '52fa771b-a63b-44df-a73a-62fcabc48fd0',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lançamentos aprovados { flow: 'commission-approve', count: 1, totalAmount: '10.00' }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão estornada {
+        subscriptionId: 'sub_B38_292092_45',
+        paymentId: 'pay_B38_292092_46',
+        flow: 'refund',
+        tenantId: 1110,
+        credits: 1,
+        reversals: 1
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B38_292092_49',
+        paymentId: 'pay_B38_292092_50',
+        tenantId: 1111,
+        salesAgentId: '0bdcb6c4-1135-4f91-b48d-51601fece42e',
+        salesAgentCommissionId: '0367d6a5-fd2d-495d-b4f3-ce4fb38def82',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lançamentos aprovados { flow: 'commission-approve', count: 1, totalAmount: '10.00' }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lote de repasse fechado {
+        flow: 'commission-payout',
+        batchId: 'PB-20260922-aeed191c923b',
+        count: 1,
+        totalAmount: '10.00'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B38_292092_53',
+        paymentId: 'pay_B38_292092_54',
+        tenantId: 1112,
+        salesAgentId: 'c54011e2-ac3d-4007-8274-7830548ff1d1',
+        salesAgentCommissionId: '80beeebf-9d23-4cdd-bd6a-0412cb128de9',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lançamentos aprovados { flow: 'commission-approve', count: 1, totalAmount: '10.00' }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lançamentos aprovados { flow: 'commission-approve', count: 1, totalAmount: '10.00' }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B38_292092_57',
+        paymentId: 'pay_B38_292092_58',
+        tenantId: 1113,
+        salesAgentId: 'a795510f-27a4-4fb7-9126-3cb735fb324c',
+        salesAgentCommissionId: 'f8813cc8-dd55-4902-9b69-d419e558301c',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lançamentos aprovados { flow: 'commission-approve', count: 1, totalAmount: '10.00' }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B38_292092_61',
+        paymentId: 'pay_B38_292092_64',
+        tenantId: 1114,
+        salesAgentId: '7885de75-31e3-4612-bd38-13349ac69ce1',
+        salesAgentCommissionId: '35019aef-7b35-435f-b9b9-de4bb5b8c787',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B38_292092_63',
+        paymentId: 'pay_B38_292092_65',
+        tenantId: 1115,
+        salesAgentId: '7fb0565e-3cb0-4de1-989b-dd0e1ffc2ee6',
+        salesAgentCommissionId: 'c1ca2878-ea74-40a2-9afb-4c5d054d571a',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lançamentos aprovados { flow: 'commission-approve', count: 1, totalAmount: '10.00' }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lançamentos aprovados { flow: 'commission-approve', count: 1, totalAmount: '50.00' }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lote de repasse fechado {
+        flow: 'commission-payout',
+        batchId: 'PB-20260922-1605b13f0292',
+        count: 1,
+        totalAmount: '10.00'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lote de repasse fechado {
+        flow: 'commission-payout',
+        batchId: 'PB-20260922-64bed92335dd',
+        count: 1,
+        totalAmount: '50.00'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B38_292092_68',
+        paymentId: 'pay_B38_292092_69',
+        tenantId: 1116,
+        salesAgentId: '90fecd66-2f99-4d07-8ebf-56df56455872',
+        salesAgentCommissionId: 'b993a3b7-5ad9-49fa-8dad-4b21a57dc4fa',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B38_292092_72',
+        paymentId: 'pay_B38_292092_73',
+        tenantId: 1117,
+        salesAgentId: 'e56d340f-b477-4d78-97c5-00370ae0ccd6',
+        salesAgentCommissionId: '60041138-32a6-4bd5-a448-55a2f2064f3d',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B38_292092_72',
+        paymentId: 'pay_B38_292092_74',
+        tenantId: 1117,
+        salesAgentId: 'e56d340f-b477-4d78-97c5-00370ae0ccd6',
+        salesAgentCommissionId: '60041138-32a6-4bd5-a448-55a2f2064f3d',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 2,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lançamentos aprovados { flow: 'commission-approve', count: 2, totalAmount: '30.00' }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B38_292092_77',
+        paymentId: 'pay_B38_292092_78',
+        tenantId: 1118,
+        salesAgentId: 'a63b468e-6e35-428b-920b-033a05b04c66',
+        salesAgentCommissionId: '1e4a6f8a-065d-409d-b502-3b799d291582',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lançamentos aprovados { flow: 'commission-approve', count: 1, totalAmount: '10.00' }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lote de repasse fechado {
+        flow: 'commission-payout',
+        batchId: 'PB-20260922-bf6ee771bc69',
+        count: 1,
+        totalAmount: '10.00'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B38_292092_81',
+        paymentId: 'pay_B38_292092_82',
+        tenantId: 1119,
+        salesAgentId: '78b7fe5c-fed5-467e-8257-492caee6edf6',
+        salesAgentCommissionId: '4f2e8b15-480e-42be-b8e6-134ee2503f49',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lançamentos aprovados { flow: 'commission-approve', count: 1, totalAmount: '10.00' }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B38_292092_85',
+        paymentId: 'pay_B38_292092_86',
+        tenantId: 1120,
+        salesAgentId: '3539fd82-242b-4bec-b0e7-2facb8c73837',
+        salesAgentCommissionId: 'caaa53ca-bc0a-4207-916c-02a185702b1c',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lançamentos aprovados { flow: 'commission-approve', count: 1, totalAmount: '10.00' }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lote de repasse fechado {
+        flow: 'commission-payout',
+        batchId: 'PB-20260922-cb41ad4023b7',
+        count: 1,
+        totalAmount: '10.00'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B38_292092_89',
+        paymentId: 'pay_B38_292092_90',
+        tenantId: 1121,
+        salesAgentId: 'cece9b73-6973-4723-a90c-395b1c64a782',
+        salesAgentCommissionId: '7f7334e3-e6d3-4715-9358-810a4a853da0',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B38_292092_89',
+        paymentId: 'pay_B38_292092_91',
+        tenantId: 1121,
+        salesAgentId: 'cece9b73-6973-4723-a90c-395b1c64a782',
+        salesAgentCommissionId: '7f7334e3-e6d3-4715-9358-810a4a853da0',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 2,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lançamentos aprovados { flow: 'commission-approve', count: 2, totalAmount: '30.00' }
+
+      at Object.info (app/utils/logger.js:4:31)
+          at async Promise.all (index 0)
+
+    console.log
+      [INFO] [commission-payout] lote de repasse fechado {
+        flow: 'commission-payout',
+        batchId: 'PB-20260922-e6b69ed08fae',
+        count: 2,
+        totalAmount: '30.00'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+          at async Promise.all (index 0)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B38_292092_94',
+        paymentId: 'pay_B38_292092_95',
+        tenantId: 1122,
+        salesAgentId: 'a437608e-b448-4368-b2b4-daf87d5d025d',
+        salesAgentCommissionId: '284114a0-8d04-41c7-b280-bdcc6338d009',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lançamentos aprovados { flow: 'commission-approve', count: 1, totalAmount: '10.00' }
+
+      at Object.info (app/utils/logger.js:4:31)
+          at async Promise.all (index 0)
+
+PASS __tests__/integration/commissionPayout.test.js
+  ● Console
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B37_292092_3',
+        paymentId: 'pay_B37_292092_4',
+        tenantId: 1123,
+        salesAgentId: '6ad16973-2949-4692-98f6-6400862bd39b',
+        salesAgentCommissionId: '74206188-1a56-4818-8e23-53b120359631',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lançamentos aprovados { flow: 'commission-approve', count: 1, totalAmount: '50.00' }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B37_292092_7',
+        paymentId: 'pay_B37_292092_8',
+        tenantId: 1124,
+        salesAgentId: '21640ef5-cbd4-421f-adf0-4196b79218d9',
+        salesAgentCommissionId: 'f9dd9ca8-2c95-48e5-b43a-fd00d3463e72',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lançamentos aprovados { flow: 'commission-approve', count: 1, totalAmount: '50.00' }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lote de repasse fechado {
+        flow: 'commission-payout',
+        batchId: 'PB-20260922-d10532f5a2e4',
+        count: 1,
+        totalAmount: '50.00'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B37_292092_11',
+        paymentId: 'pay_B37_292092_12',
+        tenantId: 1125,
+        salesAgentId: '534ee8e4-6382-414f-bed2-caab04142bc0',
+        salesAgentCommissionId: 'beccd44a-3c5d-487b-9b63-0a75e3133c36',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B37_292092_15',
+        paymentId: 'pay_B37_292092_16',
+        tenantId: 1126,
+        salesAgentId: '3731ee0b-68e1-4792-bb9c-bd8ee1f0b1cc',
+        salesAgentCommissionId: '9988e79c-42be-4e9f-9b7e-d951bc4cde03',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lançamentos aprovados { flow: 'commission-approve', count: 1, totalAmount: '50.00' }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lote de repasse fechado {
+        flow: 'commission-payout',
+        batchId: 'PB-20260922-92814372578c',
+        count: 1,
+        totalAmount: '50.00'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B37_292092_19',
+        paymentId: 'pay_B37_292092_20',
+        tenantId: 1127,
+        salesAgentId: 'f46f0385-caeb-431a-933f-fb1d5d8bc48e',
+        salesAgentCommissionId: 'a64fd2f5-7b17-4c34-aa36-7aea6f04aed8',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lançamentos aprovados { flow: 'commission-approve', count: 1, totalAmount: '50.00' }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lote de repasse fechado {
+        flow: 'commission-payout',
+        batchId: 'PB-20260922-5bf1391b7f9b',
+        count: 1,
+        totalAmount: '50.00'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B37_292092_23',
+        paymentId: 'pay_B37_292092_24',
+        tenantId: 1128,
+        salesAgentId: 'aa269245-3b7a-4c6d-8f23-2d9460b36264',
+        salesAgentCommissionId: 'a3390eb9-0f0b-428e-94e6-750b34985081',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lançamentos aprovados { flow: 'commission-approve', count: 1, totalAmount: '50.00' }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B37_292092_27',
+        paymentId: 'pay_B37_292092_28',
+        tenantId: 1129,
+        salesAgentId: '46b6f793-dacb-4968-9dbb-036553416f4b',
+        salesAgentCommissionId: 'c3c996ea-5fdf-48cf-8cb9-3577a1028840',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lançamentos aprovados { flow: 'commission-approve', count: 1, totalAmount: '50.00' }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão estornada {
+        subscriptionId: 'sub_B37_292092_27',
+        paymentId: 'pay_B37_292092_28',
+        flow: 'refund',
+        tenantId: 1129,
+        credits: 1,
+        reversals: 1
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] créditos estornados cancelados { flow: 'commission-cancel-reversed', count: 1 }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B37_292092_31',
+        paymentId: 'pay_B37_292092_32',
+        tenantId: 1130,
+        salesAgentId: 'b23026bb-470d-425a-92d4-2e2b92f9619d',
+        salesAgentCommissionId: 'bfdd8a99-4b26-4b8d-807d-0f5e9320286e',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lançamentos aprovados { flow: 'commission-approve', count: 1, totalAmount: '50.00' }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lote de repasse fechado {
+        flow: 'commission-payout',
+        batchId: 'PB-20260922-1924f4895f94',
+        count: 1,
+        totalAmount: '50.00'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão estornada {
+        subscriptionId: 'sub_B37_292092_31',
+        paymentId: 'pay_B37_292092_32',
+        flow: 'refund',
+        tenantId: 1130,
+        credits: 1,
+        reversals: 1
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B37_292092_35',
+        paymentId: 'pay_B37_292092_36',
+        tenantId: 1131,
+        salesAgentId: '03dd7cb1-0bd7-4999-91cc-0dcf3f5a57c9',
+        salesAgentCommissionId: '1f1866af-929f-450e-80c2-75e3cbb6cd31',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão estornada {
+        subscriptionId: 'sub_B37_292092_35',
+        paymentId: 'pay_B37_292092_36',
+        flow: 'refund',
+        tenantId: 1131,
+        credits: 1,
+        reversals: 1
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B37_292092_39',
+        paymentId: 'pay_B37_292092_40',
+        tenantId: 1132,
+        salesAgentId: 'bf478271-c760-498b-8667-3a76ac7935d5',
+        salesAgentCommissionId: '5889221e-2ec0-4f63-9dcc-262df5e67327',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B37_292092_43',
+        paymentId: 'pay_B37_292092_44',
+        tenantId: 1133,
+        salesAgentId: 'd8df53f3-a304-4985-a7b2-f4e80f164ba0',
+        salesAgentCommissionId: '64c50a96-e2df-4022-9119-b15d0278ce2f',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B37_292092_47',
+        paymentId: 'pay_B37_292092_48',
+        tenantId: 1134,
+        salesAgentId: '7d34ea6c-e201-48ac-8b59-69030467860e',
+        salesAgentCommissionId: '94dd5a3e-184e-471d-a944-9a71c3ca41c3',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B37_292092_47',
+        paymentId: 'pay_B37_292092_49',
+        tenantId: 1134,
+        salesAgentId: '7d34ea6c-e201-48ac-8b59-69030467860e',
+        salesAgentCommissionId: '94dd5a3e-184e-471d-a944-9a71c3ca41c3',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 2,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B37_292092_47',
+        paymentId: 'pay_B37_292092_50',
+        tenantId: 1134,
+        salesAgentId: '7d34ea6c-e201-48ac-8b59-69030467860e',
+        salesAgentCommissionId: '94dd5a3e-184e-471d-a944-9a71c3ca41c3',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 3,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lançamentos aprovados { flow: 'commission-approve', count: 3, totalAmount: '180.00' }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lote de repasse fechado {
+        flow: 'commission-payout',
+        batchId: 'PB-20260922-49e85a6b734f',
+        count: 3,
+        totalAmount: '180.00'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B37_292092_53',
+        paymentId: 'pay_B37_292092_54',
+        tenantId: 1135,
+        salesAgentId: '204f7e5d-928b-4d02-805d-693646d5dbc0',
+        salesAgentCommissionId: 'c0d33129-0c31-4911-9d30-56dd58de0491',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B37_292092_53',
+        paymentId: 'pay_B37_292092_55',
+        tenantId: 1135,
+        salesAgentId: '204f7e5d-928b-4d02-805d-693646d5dbc0',
+        salesAgentCommissionId: 'c0d33129-0c31-4911-9d30-56dd58de0491',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 2,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lançamentos aprovados { flow: 'commission-approve', count: 2, totalAmount: '40.00' }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lote de repasse fechado {
+        flow: 'commission-payout',
+        batchId: 'PB-20260922-77ea4b4e2e31',
+        count: 1,
+        totalAmount: '20.00'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lote de repasse fechado {
+        flow: 'commission-payout',
+        batchId: 'PB-20260922-30aba587d7eb',
+        count: 1,
+        totalAmount: '20.00'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B37_292092_58',
+        paymentId: 'pay_B37_292092_59',
+        tenantId: 1136,
+        salesAgentId: 'd4115f9b-d538-4bf7-94e1-a772be2fb358',
+        salesAgentCommissionId: '2334da07-7362-43b3-bce5-c12664fc25b1',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B37_292092_58',
+        paymentId: 'pay_B37_292092_60',
+        tenantId: 1136,
+        salesAgentId: 'd4115f9b-d538-4bf7-94e1-a772be2fb358',
+        salesAgentCommissionId: '2334da07-7362-43b3-bce5-c12664fc25b1',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 2,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lançamentos aprovados { flow: 'commission-approve', count: 1, totalAmount: '20.00' }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B37_292092_63',
+        paymentId: 'pay_B37_292092_64',
+        tenantId: 1137,
+        salesAgentId: 'acac8015-ad8c-4e3a-b720-ed3141516fd1',
+        salesAgentCommissionId: 'ef881ffa-7526-4de9-b68d-0c5267df3840',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B37_292092_63',
+        paymentId: 'pay_B37_292092_65',
+        tenantId: 1137,
+        salesAgentId: 'acac8015-ad8c-4e3a-b720-ed3141516fd1',
+        salesAgentCommissionId: 'ef881ffa-7526-4de9-b68d-0c5267df3840',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 2,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lançamentos aprovados { flow: 'commission-approve', count: 1, totalAmount: '20.00' }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B37_292092_68',
+        paymentId: 'pay_B37_292092_69',
+        tenantId: 1138,
+        salesAgentId: 'cfa675f3-18a6-453d-bf7d-13d5c9c7be08',
+        salesAgentCommissionId: '55d2fec5-6ea2-44db-9252-6ddc1e3f2050',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lançamentos aprovados { flow: 'commission-approve', count: 1, totalAmount: '50.00' }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lote de repasse fechado {
+        flow: 'commission-payout',
+        batchId: 'PB-20260922-31bdaeb37860',
+        count: 1,
+        totalAmount: '50.00'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B37_292092_72',
+        paymentId: 'pay_B37_292092_73',
+        tenantId: 1139,
+        salesAgentId: '388b2955-630e-44dd-afe7-a86775f56f79',
+        salesAgentCommissionId: 'e475d87c-a9c1-4d0a-826a-dfd4aab1fc06',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lançamentos aprovados { flow: 'commission-approve', count: 1, totalAmount: '60.00' }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lote de repasse fechado {
+        flow: 'commission-payout',
+        batchId: 'PB-20260922-9ce025452ca9',
+        count: 1,
+        totalAmount: '60.00'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B37_292092_76',
+        paymentId: 'pay_B37_292092_77',
+        tenantId: 1140,
+        salesAgentId: 'ab19138a-36e7-40a3-a178-13a00e36b78e',
+        salesAgentCommissionId: '01b1dc27-7a55-43d3-8294-2873f0693a4f',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão estornada {
+        subscriptionId: 'sub_B37_292092_76',
+        paymentId: 'pay_B37_292092_77',
+        flow: 'refund',
+        tenantId: 1140,
+        credits: 1,
+        reversals: 1
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B37_292092_80',
+        paymentId: 'pay_B37_292092_81',
+        tenantId: 1141,
+        salesAgentId: '57e0c198-8a70-4b60-958b-8aceecc55421',
+        salesAgentCommissionId: '6351867d-526c-4fc5-bc19-e8bd002c6138',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lançamentos aprovados { flow: 'commission-approve', count: 1, totalAmount: '50.00' }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão estornada {
+        subscriptionId: 'sub_B37_292092_80',
+        paymentId: 'pay_B37_292092_81',
+        flow: 'refund',
+        tenantId: 1141,
+        credits: 1,
+        reversals: 1
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] créditos estornados cancelados { flow: 'commission-cancel-reversed', count: 1 }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B37_292092_84',
+        paymentId: 'pay_B37_292092_85',
+        tenantId: 1142,
+        salesAgentId: '425254ed-a411-4d7d-b82c-4f0b32cbf0fa',
+        salesAgentCommissionId: '8f93bec6-8a86-40fc-9e1e-aa6f74d2eb7a',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B37_292092_88',
+        paymentId: 'pay_B37_292092_89',
+        tenantId: 1143,
+        salesAgentId: '824a4ca9-ba8d-416f-8bdc-91ec692595e6',
+        salesAgentCommissionId: '72010ac4-493c-4b15-9ad9-82fa2bd7f1bf',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lançamentos aprovados { flow: 'commission-approve', count: 1, totalAmount: '50.00' }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lote de repasse fechado {
+        flow: 'commission-payout',
+        batchId: 'PB-20260922-1df533a6bd17',
+        count: 1,
+        totalAmount: '50.00'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão estornada {
+        subscriptionId: 'sub_B37_292092_88',
+        paymentId: 'pay_B37_292092_89',
+        flow: 'refund',
+        tenantId: 1143,
+        credits: 1,
+        reversals: 1
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B37_292092_92',
+        paymentId: 'pay_B37_292092_93',
+        tenantId: 1144,
+        salesAgentId: 'ac05738e-c3fb-481f-b8aa-bcb39cb9661b',
+        salesAgentCommissionId: '4a724980-aa3c-4a61-b8ff-8f6a69c4f878',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lançamentos aprovados { flow: 'commission-approve', count: 1, totalAmount: '50.00' }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lançamentos aprovados { flow: 'commission-approve', count: 1, totalAmount: '50.00' }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lote de repasse fechado {
+        flow: 'commission-payout',
+        batchId: 'PB-20260922-68a2013fa56d',
+        count: 1,
+        totalAmount: '50.00'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B37_292092_92',
+        paymentId: 'pay_B37_292092_94',
+        tenantId: 1144,
+        salesAgentId: 'ac05738e-c3fb-481f-b8aa-bcb39cb9661b',
+        salesAgentCommissionId: '4a724980-aa3c-4a61-b8ff-8f6a69c4f878',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 2,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão estornada {
+        subscriptionId: 'sub_B37_292092_92',
+        paymentId: 'pay_B37_292092_94',
+        flow: 'refund',
+        tenantId: 1144,
+        credits: 1,
+        reversals: 1
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] créditos estornados cancelados { flow: 'commission-cancel-reversed', count: 1 }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B37_292092_97',
+        paymentId: 'pay_B37_292092_98',
+        tenantId: 1145,
+        salesAgentId: 'd891d86c-68b5-4cff-9fae-afb10460b8bf',
+        salesAgentCommissionId: 'a134c7e2-444e-4d82-90e8-560680a60605',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lançamentos aprovados { flow: 'commission-approve', count: 1, totalAmount: '100.00' }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lote de repasse fechado {
+        flow: 'commission-payout',
+        batchId: 'PB-20260922-ad6e0766a1ac',
+        count: 1,
+        totalAmount: '100.00'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B37_292092_101',
+        paymentId: 'pay_B37_292092_102',
+        tenantId: 1146,
+        salesAgentId: 'df646c31-3fca-4c23-8074-5dee5bcafe6e',
+        salesAgentCommissionId: '34fba4e1-a9ea-47c6-825d-bcd86b854f4d',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B37_292092_101',
+        paymentId: 'pay_B37_292092_103',
+        tenantId: 1146,
+        salesAgentId: 'df646c31-3fca-4c23-8074-5dee5bcafe6e',
+        salesAgentCommissionId: '34fba4e1-a9ea-47c6-825d-bcd86b854f4d',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 2,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B37_292092_101',
+        paymentId: 'pay_B37_292092_104',
+        tenantId: 1146,
+        salesAgentId: 'df646c31-3fca-4c23-8074-5dee5bcafe6e',
+        salesAgentCommissionId: '34fba4e1-a9ea-47c6-825d-bcd86b854f4d',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 3,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lançamentos aprovados { flow: 'commission-approve', count: 2, totalAmount: '250.00' }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission-payout] lote de repasse fechado {
+        flow: 'commission-payout',
+        batchId: 'PB-20260922-85b66e9bdbd7',
+        count: 1,
+        totalAmount: '150.00'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B37_292092_107',
+        paymentId: 'pay_B37_292092_108',
+        tenantId: 1147,
+        salesAgentId: '08b093a1-17dc-435a-be7c-dea0d7d16260',
+        salesAgentCommissionId: '58010183-dcae-4d35-ad73-369ff71619db',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B37_292092_107',
+        paymentId: 'pay_B37_292092_109',
+        tenantId: 1147,
+        salesAgentId: '08b093a1-17dc-435a-be7c-dea0d7d16260',
+        salesAgentCommissionId: '58010183-dcae-4d35-ad73-369ff71619db',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 2,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão estornada {
+        subscriptionId: 'sub_B37_292092_107',
+        paymentId: 'pay_B37_292092_108',
+        flow: 'refund',
+        tenantId: 1147,
+        credits: 1,
+        reversals: 1
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+PASS __tests__/integration/commissionReversal.test.js
+  ● Console
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B36_292092_3',
+        paymentId: 'pay_B36_292092_4',
+        tenantId: 1148,
+        salesAgentId: '1def2225-ca7f-4069-97ab-c19dcc08b598',
+        salesAgentCommissionId: 'bbdd07a7-6507-4598-8abb-2402b1d3cc28',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão estornada {
+        subscriptionId: 'sub_B36_292092_3',
+        paymentId: 'pay_B36_292092_4',
+        flow: 'refund',
+        tenantId: 1148,
+        credits: 1,
+        reversals: 1
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B36_292092_7',
+        paymentId: 'pay_B36_292092_8',
+        tenantId: 1149,
+        salesAgentId: '63976fa4-85e2-4b90-acfb-870324e77e84',
+        salesAgentCommissionId: '52e4480b-fb43-4a4c-ba66-4da630d27cc7',
+        segments: 1,
+        unitsToApply: 12,
+        consumedAfter: 12,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B36_292092_7',
+        paymentId: 'pay_B36_292092_9',
+        tenantId: 1149,
+        salesAgentId: '63976fa4-85e2-4b90-acfb-870324e77e84',
+        salesAgentCommissionId: '52e4480b-fb43-4a4c-ba66-4da630d27cc7',
+        segments: 1,
+        unitsToApply: 12,
+        consumedAfter: 24,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão estornada {
+        subscriptionId: 'sub_B36_292092_7',
+        paymentId: 'pay_B36_292092_9',
+        flow: 'refund',
+        tenantId: 1149,
+        credits: 1,
+        reversals: 1
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B36_292092_7',
+        paymentId: 'pay_B36_292092_10',
+        tenantId: 1149,
+        salesAgentId: '63976fa4-85e2-4b90-acfb-870324e77e84',
+        salesAgentCommissionId: '52e4480b-fb43-4a4c-ba66-4da630d27cc7',
+        segments: 1,
+        unitsToApply: 12,
+        consumedAfter: 24,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B36_292092_13',
+        paymentId: 'pay_B36_292092_14',
+        tenantId: 1150,
+        salesAgentId: '30a94378-2af8-4056-b26b-0b02991beb38',
+        salesAgentCommissionId: '1557c2ba-6abe-4445-ac53-3c17b4ed9fb6',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão estornada {
+        subscriptionId: 'sub_B36_292092_13',
+        paymentId: 'pay_B36_292092_14',
+        flow: 'refund',
+        tenantId: 1150,
+        credits: 1,
+        reversals: 1
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B36_292092_17',
+        paymentId: 'pay_B36_292092_18',
+        tenantId: 1151,
+        salesAgentId: 'a9c9e851-d13a-4a93-a009-11c224dbbe19',
+        salesAgentCommissionId: '3e045b56-ebce-4cc9-8945-6419a92f37b6',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão estornada {
+        subscriptionId: 'sub_B36_292092_17',
+        paymentId: 'pay_B36_292092_18',
+        flow: 'refund',
+        tenantId: 1151,
+        credits: 1,
+        reversals: 1
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] refund já estornado — ignorando reentrega {
+        subscriptionId: 'sub_B36_292092_17',
+        paymentId: 'pay_B36_292092_18',
+        flow: 'refund',
+        tenantId: 1151
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] refund já estornado — ignorando reentrega {
+        subscriptionId: 'sub_B36_292092_17',
+        paymentId: 'pay_B36_292092_18',
+        flow: 'refund',
+        tenantId: 1151
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B36_292092_21',
+        paymentId: 'pay_B36_292092_22',
+        tenantId: 1152,
+        salesAgentId: '1054dc66-7ba8-4759-a29a-570e1e0c52d2',
+        salesAgentCommissionId: '5b8008f3-8f30-48ca-b67d-2d1e6d7c7dbc',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão estornada {
+        subscriptionId: 'sub_B36_292092_21',
+        paymentId: 'pay_B36_292092_22',
+        flow: 'refund',
+        tenantId: 1152,
+        credits: 1,
+        reversals: 1
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B36_292092_25',
+        paymentId: 'pay_B36_292092_26',
+        tenantId: 1153,
+        salesAgentId: '0c73e3e6-bd68-4140-b1f9-89ceed2e70da',
+        salesAgentCommissionId: 'c0273008-ff56-472a-a8b4-7dab846798f2',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] refund sem crédito de comissão — nada a estornar {
+        subscriptionId: 'sub_B36_292092_25',
+        paymentId: 'pay-nunca-visto_B36_292092_27',
+        flow: 'refund',
+        tenantId: 1153
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B36_292092_33',
+        paymentId: 'pay_B36_292092_34',
+        tenantId: 1155,
+        salesAgentId: 'df76a8e5-71eb-4787-91f7-6bcf6f410773',
+        salesAgentCommissionId: '2a308ec9-f3b7-41e1-bc64-1545eccbf059',
+        segments: 3,
+        unitsToApply: 12,
+        consumedAfter: 12,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão estornada {
+        subscriptionId: 'sub_B36_292092_33',
+        paymentId: 'pay_B36_292092_34',
+        flow: 'refund',
+        tenantId: 1155,
+        credits: 3,
+        reversals: 3
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B36_292092_37',
+        paymentId: 'pay_B36_292092_40',
+        tenantId: 1156,
+        salesAgentId: 'c983462c-45b5-43b0-9403-ce7266831fef',
+        salesAgentCommissionId: 'a490e816-2976-4c54-a097-a3568ff7dc29',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B36_292092_39',
+        paymentId: 'pay_B36_292092_40',
+        tenantId: 1157,
+        salesAgentId: '7d7e35c1-797e-42ab-b520-a0f732fab1df',
+        salesAgentCommissionId: 'ab08cbfc-888c-49df-8b24-12d366fb44d9',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão estornada {
+        subscriptionId: 'sub_B36_292092_37',
+        paymentId: 'pay_B36_292092_40',
+        flow: 'refund',
+        tenantId: 1156,
+        credits: 1,
+        reversals: 1
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão estornada {
+        subscriptionId: 'sub_B36_292092_39',
+        paymentId: 'pay_B36_292092_40',
+        flow: 'refund',
+        tenantId: 1157,
+        credits: 1,
+        reversals: 1
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B36_292092_43',
+        paymentId: 'pay_B36_292092_44',
+        tenantId: 1158,
+        salesAgentId: '787699e4-49ec-4b97-9d3c-1575c7423cfc',
+        salesAgentCommissionId: '89a7e64a-37ce-4a9c-8cba-9d8ed8d8eaee',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B36_292092_43',
+        paymentId: 'pay_B36_292092_45',
+        tenantId: 1158,
+        salesAgentId: '787699e4-49ec-4b97-9d3c-1575c7423cfc',
+        salesAgentCommissionId: '89a7e64a-37ce-4a9c-8cba-9d8ed8d8eaee',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 2,
+        status: 'completed'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.warn
+      [WARN] [commission] contrato completed voltou a ter unidades livres após estorno — status será recalculado no próximo pagamento {
+        subscriptionId: 'sub_B36_292092_43',
+        paymentId: 'pay_B36_292092_45',
+        flow: 'refund',
+        tenantId: 1158,
+        salesAgentCommissionId: '89a7e64a-37ce-4a9c-8cba-9d8ed8d8eaee',
+        totalUnits: 2,
+        consumedUnits: 1
+      }
+
+      3 | module.exports = {
+      4 |     info: (...msg) => console.log('[INFO]', ...msg),
+    > 5 |     warn: (...msg) => console.warn('[WARN]', ...msg),
+        |                               ^
+      6 |     error: (...msg) => console.error('[ERROR]', ...msg)
+      7 |   };
+      8 |   
+
+      at Object.warn (app/utils/logger.js:5:31)
+      at Object.reverseCommissionFromRefund (app/services/commissionEngine.js:788:18)
+      at refund (__tests__/integration/commissionReversal.test.js:122:5)
+      at Object.<anonymous> (__tests__/integration/commissionReversal.test.js:490:5)
+
+    console.log
+      [INFO] [commission] comissão estornada {
+        subscriptionId: 'sub_B36_292092_43',
+        paymentId: 'pay_B36_292092_45',
+        flow: 'refund',
+        tenantId: 1158,
+        credits: 1,
+        reversals: 1
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B36_292092_43',
+        paymentId: 'pay_B36_292092_46',
+        tenantId: 1158,
+        salesAgentId: '787699e4-49ec-4b97-9d3c-1575c7423cfc',
+        salesAgentCommissionId: '89a7e64a-37ce-4a9c-8cba-9d8ed8d8eaee',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 2,
+        status: 'completed'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B36_292092_49',
+        paymentId: 'pay_B36_292092_50',
+        tenantId: 1159,
+        salesAgentId: '1fca5218-0079-44ef-81ef-bea3cf686d0a',
+        salesAgentCommissionId: '6a1b70d6-e9ab-4132-b11a-f7b229e66922',
+        segments: 2,
+        unitsToApply: 12,
+        consumedAfter: 12,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão estornada {
+        subscriptionId: 'sub_B36_292092_49',
+        paymentId: 'pay_B36_292092_50',
+        flow: 'refund',
+        tenantId: 1159,
+        credits: 2,
+        reversals: 2
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B36_292092_53',
+        paymentId: 'pay_B36_292092_54',
+        tenantId: 1160,
+        salesAgentId: '89e23f83-d0e3-4feb-a988-381d010532f5',
+        salesAgentCommissionId: '5ac538ce-cf54-4cfe-8f1b-286ae6a9582f',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.error
+      [ERROR] [commission] falha ao estornar comissão {
+        subscriptionId: 'sub_B36_292092_53',
+        paymentId: 'pay_B36_292092_54',
+        tenantId: 1160,
+        error: 'INSERT do estorno explodiu'
+      }
+
+      4 |     info: (...msg) => console.log('[INFO]', ...msg),
+      5 |     warn: (...msg) => console.warn('[WARN]', ...msg),
+    > 6 |     error: (...msg) => console.error('[ERROR]', ...msg)
+        |                                ^
+      7 |   };
+      8 |   
+
+      at Object.error (app/utils/logger.js:6:32)
+      at Object.reverseCommissionFromRefund (app/services/commissionEngine.js:808:14)
+      at refund (__tests__/integration/commissionReversal.test.js:122:5)
+      at Object.<anonymous> (__tests__/integration/commissionReversal.test.js:567:5)
+
+    console.log
+      [INFO] [commission] comissão lançada {
+        subscriptionId: 'sub_B36_292092_57',
+        paymentId: 'pay_B36_292092_58',
+        tenantId: 1161,
+        salesAgentId: 'e67ec1b3-571c-45df-9233-e51e392f54d0',
+        salesAgentCommissionId: '142b5c89-10e0-4640-b9a1-476a98616c16',
+        segments: 1,
+        unitsToApply: 1,
+        consumedAfter: 1,
+        status: 'active'
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+    console.log
+      [INFO] [commission] comissão estornada {
+        subscriptionId: 'sub_B36_292092_57',
+        paymentId: 'pay_B36_292092_58',
+        flow: 'refund',
+        tenantId: 1161,
+        credits: 1,
+        reversals: 1
+      }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+----------|---------|----------|---------|---------|-------------------
+File      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+----------|---------|----------|---------|---------|-------------------
+All files |       0 |        0 |       0 |       0 |                   
+----------|---------|----------|---------|---------|-------------------
+
+Test Suites: 3 passed, 3 total
+Tests:       66 passed, 66 total
+Snapshots:   0 total
+Time:        10.044 s
+Ran all test suites matching /__tests__\/integration\/commissionReversal.test.js|__tests__\/integration\/commissionPayout.test.js|__tests__\/integration\/commissionJob.test.js/i.

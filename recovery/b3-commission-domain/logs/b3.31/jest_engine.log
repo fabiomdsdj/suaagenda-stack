@@ -1,0 +1,40 @@
+      at ConnectionManager.connect (node_modules/sequelize/src/dialects/mysql/connection-manager.js:126:17)
+      at ConnectionManager._connect (node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+      at node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+      at ConnectionManager.getConnection (node_modules/sequelize/src/dialects/abstract/connection-manager.js:280:7)
+      at node_modules/sequelize/src/sequelize.js:638:26
+      at MySQLQueryInterface.select (node_modules/sequelize/src/dialects/abstract/query-interface.js:1001:12)
+      at Function.findAll (node_modules/sequelize/src/model.js:1824:21)
+      at Object.<anonymous> (__tests__/integration/commissionEngine.test.js:147:21)
+
+  console.error
+    [ERROR] [commission] falha ao processar comissão {
+      subscriptionId: 'sub_inexistente_b35',
+      paymentId: 'pay_y',
+      tenantId: undefined,
+      salesAgentId: undefined,
+      salesAgentCommissionId: undefined,
+      error: 'getaddrinfo EAI_AGAIN db_beleza'
+    }
+
+      4 |     info: (...msg) => console.log('[INFO]', ...msg),
+      5 |     warn: (...msg) => console.warn('[WARN]', ...msg),
+    > 6 |     error: (...msg) => console.error('[ERROR]', ...msg)
+        |                                ^
+      7 |   };
+      8 |   
+
+      at Object.error (app/utils/logger.js:6:32)
+      at Object.processCommissionFromPayment (app/services/commissionEngine.js:604:14)
+      at Object.<anonymous> (__tests__/integration/commissionEngine.test.js:678:5)
+
+----------|---------|----------|---------|---------|-------------------
+File      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+----------|---------|----------|---------|---------|-------------------
+All files |       0 |        0 |       0 |       0 |                   
+----------|---------|----------|---------|---------|-------------------
+Test Suites: 1 failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        2.823 s
+Ran all test suites matching /__tests__\/integration\/commissionEngine.test.js/i.

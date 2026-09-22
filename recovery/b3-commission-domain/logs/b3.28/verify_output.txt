@@ -1,0 +1,46 @@
+=== INSTALLMENT rawAttributes (24) ===
+id, installmentNumber, paymentId, referenceMonth, approvedAt, paidAt, amount, dueDate, status, salesAgentCommissionId, termId, paymentDate, billingCycle, unitFrom, unitTo, unitsCovered, baseAmount, percentApplied, entryType, reversalOfId, payoutDueDate, payoutBatchId, createdAt, updatedAt
+
+=== 11 COLUNAS EXIGIDAS ===
+  OK    paymentDate      DATE  allowNull=true
+  OK    billingCycle     ENUM(monthly|quarterly|annual)  allowNull=true
+  OK    unitFrom         INTEGER  allowNull=true
+  OK    unitTo           INTEGER  allowNull=true
+  OK    unitsCovered     INTEGER  allowNull=true
+  OK    baseAmount       DECIMAL  allowNull=true
+  OK    percentApplied   DECIMAL  allowNull=true
+  OK    entryType        ENUM(credit|reversal)  allowNull=false
+  OK    reversalOfId     UUID  allowNull=true
+  OK    payoutDueDate    DATEONLY  allowNull=true
+  OK    payoutBatchId    STRING  allowNull=true
+
+  termId           : OK   UUID
+  status           : ENUM(pending|approved|paid|cancelled)
+  entryType default: credit
+  paymentId unique : undefined (unicidade global removida - OK)
+
+=== ASSOCIACOES ===
+
+  SalesAgentCommissionInstallment:
+    commission     BelongsTo  -> SalesAgentCommission  (fk=salesAgentCommissionId)
+    term           BelongsTo  -> SalesAgentCommissionTerm  (fk=termId)
+    reversalOf     BelongsTo  -> SalesAgentCommissionInstallment  (fk=reversalOfId)
+    reversals      HasMany    -> SalesAgentCommissionInstallment  (fk=reversalOfId)
+
+  SalesAgentCommission:
+    salesAgent     BelongsTo  -> SalesAgent  (fk=salesAgentId)
+    tenant         BelongsTo  -> Tenant  (fk=tenantId)
+    signature      BelongsTo  -> Signature  (fk=signatureId)
+    commissionPlan BelongsTo  -> CommissionPlan  (fk=commissionPlanId)
+    terms          HasMany    -> SalesAgentCommissionTerm  (fk=salesAgentCommissionId)
+    parentCommission BelongsTo  -> SalesAgentCommission  (fk=parentCommissionId)
+    childCommissions HasMany    -> SalesAgentCommission  (fk=parentCommissionId)
+    installments   HasMany    -> SalesAgentCommissionInstallment  (fk=salesAgentCommissionId)
+
+  SalesAgentCommissionTerm:
+    commission     BelongsTo  -> SalesAgentCommission  (fk=salesAgentCommissionId)
+    installments   HasMany    -> SalesAgentCommissionInstallment  (fk=termId)
+
+=== RESULTADO ===
+  colunas faltando: NENHUMA
+  assoc faltando  : NENHUMA

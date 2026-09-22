@@ -1,0 +1,832 @@
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B38_266373_3',
+      paymentId: 'pay_B38_266373_4',
+      tenantId: 989,
+      salesAgentId: 'dd55e997-42bc-4ff3-9ef2-855dffb4685e',
+      salesAgentCommissionId: '7ff544a6-97f1-4b06-85e0-da4c5e1f305b',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B38_266373_3',
+      paymentId: 'pay_B38_266373_5',
+      tenantId: 989,
+      salesAgentId: 'dd55e997-42bc-4ff3-9ef2-855dffb4685e',
+      salesAgentCommissionId: '7ff544a6-97f1-4b06-85e0-da4c5e1f305b',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B38_266373_8',
+      paymentId: 'pay_B38_266373_9',
+      tenantId: 990,
+      salesAgentId: 'c7c24e6a-d607-4719-81b9-98cc232394ea',
+      salesAgentCommissionId: '0ca3ab4b-44e7-4aff-9524-dfe5da1ce8aa',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B38_266373_12',
+      paymentId: 'pay_B38_266373_13',
+      tenantId: 991,
+      salesAgentId: '90731d02-2ebb-4d81-b3a3-9d352f453061',
+      salesAgentCommissionId: '0edabff6-10f3-42dc-97d9-c184543b58ca',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B38_266373_16',
+      paymentId: 'pay_B38_266373_17',
+      tenantId: 992,
+      salesAgentId: '02c167b9-754e-4c82-960d-a4accdb5e10c',
+      salesAgentCommissionId: '9a411b41-ffe1-482a-97eb-f26e194e0a61',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B38_266373_20',
+      paymentId: 'pay_B38_266373_21',
+      tenantId: 993,
+      salesAgentId: '6d2b801f-251d-484e-ad51-5c312f4abea9',
+      salesAgentCommissionId: '67c26982-f363-4e64-b4cd-e9ef905736d1',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B38_266373_24',
+      paymentId: 'pay_B38_266373_25',
+      tenantId: 994,
+      salesAgentId: '42c00774-88f9-46f4-bcaa-e69fa356fd0f',
+      salesAgentCommissionId: 'e79340f6-18c1-4985-b72b-2436fa80056d',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B38_266373_28',
+      paymentId: 'pay_B38_266373_29',
+      tenantId: 995,
+      salesAgentId: 'a7c38f22-e639-4294-a772-c2bf2201a756',
+      salesAgentCommissionId: 'ab4f63fa-05fd-401c-a14e-e926d73eb2c7',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B38_266373_32',
+      paymentId: 'pay_B38_266373_33',
+      tenantId: 996,
+      salesAgentId: '49298670-d7fd-4c83-aa20-3fe834a2ee01',
+      salesAgentCommissionId: '9ba26686-9dff-44e7-8778-86033a49de73',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B38_266373_36',
+      paymentId: 'pay_B38_266373_37',
+      tenantId: 997,
+      salesAgentId: '46ea0d53-d38e-4c78-9e80-5914e368d442',
+      salesAgentCommissionId: '32b3a3d4-22b6-4f2e-ad88-679c075fe353',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B38_266373_36',
+      paymentId: 'pay_B38_266373_38',
+      tenantId: 997,
+      salesAgentId: '46ea0d53-d38e-4c78-9e80-5914e368d442',
+      salesAgentCommissionId: '32b3a3d4-22b6-4f2e-ad88-679c075fe353',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.warn
+    [WARN] [commission] corrida no estorno — reversal já lançado {
+      subscriptionId: 'sub_B38_266373_36',
+      paymentId: 'pay_B38_266373_37',
+      flow: 'refund',
+      tenantId: 997,
+      salesAgentCommissionId: '32b3a3d4-22b6-4f2e-ad88-679c075fe353',
+      creditId: '8ce0df66-b88e-4f4e-b468-31a3fa78a850'
+    }
+
+      3 | module.exports = {
+      4 |     info: (...msg) => console.log('[INFO]', ...msg),
+    > 5 |     warn: (...msg) => console.warn('[WARN]', ...msg),
+        |                               ^
+      6 |     error: (...msg) => console.error('[ERROR]', ...msg)
+      7 |   };
+      8 |   
+
+      at Object.warn (app/utils/logger.js:5:31)
+      at Object.reverseCommissionFromRefund (app/services/commissionEngine.js:766:20)
+      at refund (__tests__/integration/commissionJob.test.js:129:5)
+      at Object.<anonymous> (__tests__/integration/commissionJob.test.js:442:5)
+
+  console.log
+    [INFO] [commission] comissão estornada {
+      subscriptionId: 'sub_B38_266373_36',
+      paymentId: 'pay_B38_266373_37',
+      flow: 'refund',
+      tenantId: 997,
+      credits: 1,
+      reversals: 0
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B38_266373_41',
+      paymentId: 'pay_B38_266373_42',
+      tenantId: 998,
+      salesAgentId: '5b594b79-01ba-4b7c-9d39-17f505e678a0',
+      salesAgentCommissionId: 'a569492c-71c3-4593-99ec-ab0872e4a844',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.warn
+    [WARN] [commission] corrida no estorno — reversal já lançado {
+      subscriptionId: 'sub_B38_266373_41',
+      paymentId: 'pay_B38_266373_42',
+      flow: 'refund',
+      tenantId: 998,
+      salesAgentCommissionId: 'a569492c-71c3-4593-99ec-ab0872e4a844',
+      creditId: '0f77a0ed-b4c1-4f50-985b-85b35767cf9c'
+    }
+
+      3 | module.exports = {
+      4 |     info: (...msg) => console.log('[INFO]', ...msg),
+    > 5 |     warn: (...msg) => console.warn('[WARN]', ...msg),
+        |                               ^
+      6 |     error: (...msg) => console.error('[ERROR]', ...msg)
+      7 |   };
+      8 |   
+
+      at Object.warn (app/utils/logger.js:5:31)
+      at Object.reverseCommissionFromRefund (app/services/commissionEngine.js:766:20)
+      at refund (__tests__/integration/commissionJob.test.js:129:5)
+      at Object.<anonymous> (__tests__/integration/commissionJob.test.js:463:5)
+
+  console.log
+    [INFO] [commission] comissão estornada {
+      subscriptionId: 'sub_B38_266373_41',
+      paymentId: 'pay_B38_266373_42',
+      flow: 'refund',
+      tenantId: 998,
+      credits: 1,
+      reversals: 0
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B38_266373_45',
+      paymentId: 'pay_B38_266373_46',
+      tenantId: 999,
+      salesAgentId: '7e9da086-c19b-4ad0-8e05-0e6da6e38179',
+      salesAgentCommissionId: 'de3303fe-964d-42da-aa4a-154cfefab1f1',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B38_266373_49',
+      paymentId: 'pay_B38_266373_50',
+      tenantId: 1000,
+      salesAgentId: '9a93b803-1817-432e-a2c0-bb5ebf8a9ede',
+      salesAgentCommissionId: 'da435cc4-66fb-4da7-84ab-0a087276b371',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B38_266373_53',
+      paymentId: 'pay_B38_266373_54',
+      tenantId: 1001,
+      salesAgentId: '98df2712-fc8d-44d0-9a68-d64e8b1ec0b0',
+      salesAgentCommissionId: 'd963c7c2-a601-4a4e-a394-983a9e9d561a',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B38_266373_57',
+      paymentId: 'pay_B38_266373_58',
+      tenantId: 1002,
+      salesAgentId: 'fd748612-44cc-4dff-a12d-9176754db407',
+      salesAgentCommissionId: '829dda07-584b-41e9-bfe2-6fd957d7cd73',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B38_266373_61',
+      paymentId: 'pay_B38_266373_64',
+      tenantId: 1003,
+      salesAgentId: '40b2d727-e2fb-4bde-bc7b-5103a8334870',
+      salesAgentCommissionId: 'a876fe6d-3cc9-48cf-946a-5ca4d6f708c8',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B38_266373_63',
+      paymentId: 'pay_B38_266373_65',
+      tenantId: 1004,
+      salesAgentId: 'c4d6bc09-e2d1-4c0b-b160-4d4eed83435c',
+      salesAgentCommissionId: 'a94e8f5b-56df-4f6b-af75-f3d0b80e6519',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B38_266373_68',
+      paymentId: 'pay_B38_266373_69',
+      tenantId: 1005,
+      salesAgentId: 'afafd35f-4126-4d2a-b33f-77b5a25a9597',
+      salesAgentCommissionId: '302ba1db-666e-4f04-ae63-a574ec089fa4',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B38_266373_72',
+      paymentId: 'pay_B38_266373_73',
+      tenantId: 1006,
+      salesAgentId: 'd1646634-4cf5-42ed-b605-e4b1764bbf13',
+      salesAgentCommissionId: '82761bd6-d787-458c-ad31-6f4102a55ba6',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B38_266373_72',
+      paymentId: 'pay_B38_266373_74',
+      tenantId: 1006,
+      salesAgentId: 'd1646634-4cf5-42ed-b605-e4b1764bbf13',
+      salesAgentCommissionId: '82761bd6-d787-458c-ad31-6f4102a55ba6',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B38_266373_77',
+      paymentId: 'pay_B38_266373_78',
+      tenantId: 1007,
+      salesAgentId: '8bfea4f6-ab19-4c24-8394-598fb8373523',
+      salesAgentCommissionId: '170916e5-9859-4ffb-8b11-dfebe5522b4f',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B38_266373_81',
+      paymentId: 'pay_B38_266373_82',
+      tenantId: 1008,
+      salesAgentId: '9d18edd8-f48e-4112-a36b-a4adb65b25a4',
+      salesAgentCommissionId: '788f0b1a-6f6f-4c11-8de8-9095edd26cde',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B38_266373_85',
+      paymentId: 'pay_B38_266373_86',
+      tenantId: 1009,
+      salesAgentId: 'f540a4e4-696a-4260-8df8-54fa9e243ed8',
+      salesAgentCommissionId: 'ee2069e5-e569-4794-bb91-e25ccbde2d6c',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B38_266373_89',
+      paymentId: 'pay_B38_266373_90',
+      tenantId: 1010,
+      salesAgentId: '387a04db-ecab-41e6-8fa7-fecf1eae4e95',
+      salesAgentCommissionId: '3df6849b-0885-49e6-b1c6-7c87be126b79',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B38_266373_89',
+      paymentId: 'pay_B38_266373_91',
+      tenantId: 1010,
+      salesAgentId: '387a04db-ecab-41e6-8fa7-fecf1eae4e95',
+      salesAgentCommissionId: '3df6849b-0885-49e6-b1c6-7c87be126b79',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+FAIL __tests__/integration/commissionJob.test.js
+  B3.8 — seleção e aprovação
+    ✕ 1. o job encontra os lançamentos elegíveis do escopo (201 ms)
+    ✓ 2. a seleção vem de listApprovableInstallments / listPayableInstallments (60 ms)
+    ✕ 3. a aprovação passa por approveInstallments, com a transaction do job (160 ms)
+    ✕ a carência de aprovação segura crédito recente e não o aprova (63 ms)
+  B3.8 — o job não implementa regra financeira
+    ✕ 5. o job não atualiza status diretamente: com o service dublado, o banco não muda (56 ms)
+    ✕ 11 + 12. o valor do lote vem dos lançamentos; mexer no plano depois não muda nada (59 ms)
+    ✓ 13. `paidInstallments` do contrato não é tocado pelo job (59 ms)
+    ✕ 10. o payoutBatchId vem do service — o job não gera identificador nenhum (59 ms)
+  B3.8 — estorno (B3.6) é respeitado
+    ✕ 6. lançamento de estorno nunca entra no lote de aprovação (158 ms)
+    ✓ 7. crédito integralmente estornado não é aprovado nem pago (77 ms)
+    ✕ crédito estornado DEPOIS da aprovação sai da fila pagável sem virar paid (57 ms)
+  B3.8 — repasse e liquidação externa
+    ✕ 4. o pagamento passa por payApprovedInstallments, depois da transferência (57 ms)
+    ✕ settlement 'none' aprova, relata a fila e NÃO marca nada como paid (55 ms)
+    ✓ settlement 'external' sem função de transferência é recusado (4 ms)
+    ✕ agente sem chave PIX não é liquidado e não vira paid (54 ms)
+    ✕ o lote nunca mistura agentes: um batchId por agente (99 ms)
+  B3.8 — erros não são engolidos
+    ✕ 15. erro do payout aparece no resultado, no log e (com failFast) como exceção (56 ms)
+    ✕ 14. erro dentro da transaction do lote faz rollback — não existe lote meio aprovado (74 ms)
+    ✕ 16a. falha na integração externa deixa o lote em approved, nunca em paid (56 ms)
+    ✕ 16b. transferência OK + commit contábil falho é relatado como inconsistência explícita (51 ms)
+  B3.8 — idempotência
+    ✕ 8 + 17. reexecutar o job não repassa de novo o que já está paid (57 ms)
+    ✕ 9. dois workers simultâneos não duplicam o repasse (73 ms)
+    ✕ aprovação concorrente também não duplica: o perdedor falha alto, sem escrever (60 ms)
+  B3.8 — gateway Asaas preservado (mesmo POST /transfers de antes)
+    ✓ usa o mecanismo existente, com o valor do lote e a chave PIX do agente (3 ms)
+    ✓ falha do gateway sobe para o job, que a trata como transferência não realizada (6 ms)
+
+  ● B3.8 — seleção e aprovação › 1. o job encontra os lançamentos elegíveis do escopo
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 2
+    Received: 0
+
+      250 |     const result = await job.run({ scope: await scopeOf(scenario), settlement: 'none' });
+      251 |
+    > 252 |     expect(result.approval.candidates).toBe(2);
+          |                                        ^
+      253 |     expect(result.approval.eligible).toBe(2);
+      254 |     expect(result.approval.approved).toHaveLength(1); // um lote, um agente
+      255 |     expect(result.approval.approved[0].count).toBe(2);
+
+      at Object.<anonymous> (__tests__/integration/commissionJob.test.js:252:40)
+
+  ● B3.8 — seleção e aprovação › 3. a aprovação passa por approveInstallments, com a transaction do job
+
+    expect(received).toHaveLength(expected)
+
+    Expected length: 1
+    Received length: 0
+    Received array:  []
+
+      280 |     await job.run({ scope: await scopeOf(scenario), settlement: 'none' });
+      281 |
+    > 282 |     expect(calls.approve).toHaveLength(1);
+          |                           ^
+      283 |     expect(calls.approve[0].ids).toHaveLength(1);
+      284 |     // transaction é obrigatória no service — o job precisa tê-la aberto.
+      285 |     expect(calls.approve[0].transaction).toBeTruthy();
+
+      at Object.<anonymous> (__tests__/integration/commissionJob.test.js:282:27)
+
+  ● B3.8 — seleção e aprovação › a carência de aprovação segura crédito recente e não o aprova
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 0
+
+      306 |     });
+      307 |
+    > 308 |     expect(result.approval.candidates).toBe(1);
+          |                                        ^
+      309 |     expect(result.approval.eligible).toBe(0);
+      310 |     expect(result.approval.heldBack).toBe(1);
+      311 |
+
+      at Object.<anonymous> (__tests__/integration/commissionJob.test.js:308:40)
+
+  ● B3.8 — o job não implementa regra financeira › 5. o job não atualiza status diretamente: com o service dublado, o banco não muda
+
+    expect(received).toHaveLength(expected)
+
+    Expected length: 1
+    Received length: 0
+    Received array:  []
+
+      340 |     });
+      341 |
+    > 342 |     expect(calls.approve).toHaveLength(1);
+          |                           ^
+      343 |
+      344 |     // Toda escrita de estado mora no service. Se o service não escreveu,
+      345 |     // nada escreveu — o job não tem UPDATE próprio.
+
+      at Object.<anonymous> (__tests__/integration/commissionJob.test.js:342:27)
+
+  ● B3.8 — o job não implementa regra financeira › 11 + 12. o valor do lote vem dos lançamentos; mexer no plano depois não muda nada
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 30
+    Received: 0
+
+      360 |     const credits = creditsOf(await entriesOf(scenario));
+      361 |     const expected = credits.reduce((acc, c) => acc + money(c.amount), 0);
+    > 362 |     expect(expected).toBe(30); // 10% de 300, fictício
+          |                      ^
+      363 |
+      364 |     // Plano atual muda DEPOIS do crédito. O contrato histórico é soberano.
+      365 |     await CommissionPlanTier.update(
+
+      at Object.<anonymous> (__tests__/integration/commissionJob.test.js:362:22)
+
+  ● B3.8 — o job não implementa regra financeira › 10. o payoutBatchId vem do service — o job não gera identificador nenhum
+
+    TypeError: Cannot read properties of undefined (reading 'batchId')
+
+      424 |
+      425 |     // O job só repassa adiante o que o service devolveu.
+    > 426 |     expect(result.payout.paid[0].batchId).toBe('PB-SENTINELA-DO-SERVICE');
+          |                                  ^
+      427 |
+      428 |     // E, no caminho real, o formato é o do service (PB-yyyyMMdd-hex12).
+      429 |     const credits = creditsOf(await entriesOf(scenario));
+
+      at Object.<anonymous> (__tests__/integration/commissionJob.test.js:426:34)
+
+  ● B3.8 — estorno (B3.6) é respeitado › 6. lançamento de estorno nunca entra no lote de aprovação
+
+    expect(received).toBeGreaterThan(expected)
+
+    Expected: > 0
+    Received:   0
+
+      447 |     const entries = await entriesOf(scenario);
+      448 |     const reversals = entries.filter((e) => e.entryType === 'reversal');
+    > 449 |     expect(reversals.length).toBeGreaterThan(0);
+          |                              ^
+      450 |
+      451 |     const approvedIds = result.approval.approved.flatMap((b) => b.installmentIds);
+      452 |     for (const reversal of reversals) {
+
+      at Object.<anonymous> (__tests__/integration/commissionJob.test.js:449:30)
+
+  ● B3.8 — estorno (B3.6) é respeitado › crédito estornado DEPOIS da aprovação sai da fila pagável sem virar paid
+
+    TypeError: Cannot read properties of undefined (reading 'status')
+
+      492 |
+      493 |     let credits = creditsOf(await entriesOf(scenario));
+    > 494 |     expect(credits[0].status).toBe('approved');
+          |                       ^
+      495 |
+      496 |     await refund(scenario, target); // refund append-only: crédito segue approved
+      497 |
+
+      at Object.<anonymous> (__tests__/integration/commissionJob.test.js:494:23)
+
+  ● B3.8 — repasse e liquidação externa › 4. o pagamento passa por payApprovedInstallments, depois da transferência
+
+    expect(received).toHaveLength(expected)
+
+    Expected length: 1
+    Received length: 0
+    Received array:  []
+
+      534 |     });
+      535 |
+    > 536 |     expect(calls.pay).toHaveLength(1);
+          |                       ^
+      537 |     expect(calls.pay[0].transaction).toBeTruthy();
+      538 |     // A integração externa roda ANTES do commit contábil e FORA da transaction.
+      539 |     expect(order).toEqual(['transfer', 'pay']);
+
+      at Object.<anonymous> (__tests__/integration/commissionJob.test.js:536:23)
+
+  ● B3.8 — repasse e liquidação externa › settlement 'none' aprova, relata a fila e NÃO marca nada como paid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 0
+
+      553 |     const result = await job.run({ scope: await scopeOf(scenario), settlement: 'none' });
+      554 |
+    > 555 |     expect(result.payout.candidates).toBe(1);
+          |                                      ^
+      556 |     expect(result.payout.paid).toHaveLength(0);
+      557 |     expect(result.payout.skipped[0].reason).toBe('settlement-none');
+      558 |
+
+      at Object.<anonymous> (__tests__/integration/commissionJob.test.js:555:38)
+
+  ● B3.8 — repasse e liquidação externa › agente sem chave PIX não é liquidado e não vira paid
+
+    TypeError: Cannot read properties of undefined (reading 'reason')
+
+      581 |
+      582 |     expect(transfer).not.toHaveBeenCalled();
+    > 583 |     expect(result.payout.skipped[0].reason).toBe('missing-pix-key');
+          |                                     ^
+      584 |     expect(log.warn).toHaveBeenCalled();
+      585 |
+      586 |     const credits = creditsOf(await entriesOf(scenario));
+
+      at Object.<anonymous> (__tests__/integration/commissionJob.test.js:583:37)
+
+  ● B3.8 — repasse e liquidação externa › o lote nunca mistura agentes: um batchId por agente
+
+    expect(received).toHaveLength(expected)
+
+    Expected length: 2
+    Received length: 0
+    Received array:  []
+
+      606 |     });
+      607 |
+    > 608 |     expect(result.payout.paid).toHaveLength(2);
+          |                                ^
+      609 |     expect(transferred).toHaveLength(2);
+      610 |
+      611 |     const batchIds = new Set(result.payout.paid.map((p) => p.batchId));
+
+      at Object.<anonymous> (__tests__/integration/commissionJob.test.js:608:32)
+
+  ● B3.8 — erros não são engolidos › 15. erro do payout aparece no resultado, no log e (com failFast) como exceção
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      640 |     const result = await job.run({ scope, settlement: 'none' });
+      641 |
+    > 642 |     expect(result.ok).toBe(false);
+          |                       ^
+      643 |     expect(result.errors).toHaveLength(1);
+      644 |     expect(result.errors[0].stage).toBe('approve');
+      645 |     expect(result.errors[0].message).toBe('boom no service');
+
+      at Object.<anonymous> (__tests__/integration/commissionJob.test.js:642:23)
+
+  ● B3.8 — erros não são engolidos › 14. erro dentro da transaction do lote faz rollback — não existe lote meio aprovado
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      667 |     const result = await job.run({ scope: await scopeOf(scenario), settlement: 'none' });
+      668 |
+    > 669 |     expect(result.ok).toBe(false);
+          |                       ^
+      670 |
+      671 |     const credits = creditsOf(await entriesOf(scenario));
+      672 |     expect(credits).toHaveLength(2);
+
+      at Object.<anonymous> (__tests__/integration/commissionJob.test.js:669:23)
+
+  ● B3.8 — erros não são engolidos › 16a. falha na integração externa deixa o lote em approved, nunca em paid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      692 |     // Nada de commit contábil: o service de pagamento nem foi chamado.
+      693 |     expect(calls.pay).toHaveLength(0);
+    > 694 |     expect(result.ok).toBe(false);
+          |                       ^
+      695 |     expect(result.errors[0].stage).toBe('transfer');
+      696 |     expect(log.error).toHaveBeenCalled();
+      697 |
+
+      at Object.<anonymous> (__tests__/integration/commissionJob.test.js:694:23)
+
+  ● B3.8 — erros não são engolidos › 16b. transferência OK + commit contábil falho é relatado como inconsistência explícita
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      727 |     });
+      728 |
+    > 729 |     expect(result.ok).toBe(false);
+          |                       ^
+      730 |     const failure = result.errors[0];
+      731 |     expect(failure.stage).toBe('pay');
+      732 |     expect(failure.externallySettled).toBe(true);
+
+      at Object.<anonymous> (__tests__/integration/commissionJob.test.js:729:23)
+
+  ● B3.8 — idempotência › 8 + 17. reexecutar o job não repassa de novo o que já está paid
+
+    expect(received).toHaveLength(expected)
+
+    Expected length: 1
+    Received length: 0
+    Received array:  []
+
+      754 |
+      755 |     const first = await job.run({ scope, settlement: 'external', transfer });
+    > 756 |     expect(first.payout.paid).toHaveLength(1);
+          |                               ^
+      757 |
+      758 |     const credits = creditsOf(await entriesOf(scenario));
+      759 |     const batchId = credits[0].payoutBatchId;
+
+      at Object.<anonymous> (__tests__/integration/commissionJob.test.js:756:31)
+
+  ● B3.8 — idempotência › 9. dois workers simultâneos não duplicam o repasse
+
+    expect(received).toHaveLength(expected)
+
+    Expected length: 2
+    Received length: 0
+    Received array:  []
+
+      799 |
+      800 |     const credits = creditsOf(await entriesOf(scenario));
+    > 801 |     expect(credits).toHaveLength(2);
+          |                     ^
+      802 |     for (const credit of credits) {
+      803 |       expect(credit.status).toBe('paid');
+      804 |       expect(credit.payoutBatchId).toBeTruthy();
+
+      at Object.<anonymous> (__tests__/integration/commissionJob.test.js:801:21)
+
+  ● B3.8 — idempotência › aprovação concorrente também não duplica: o perdedor falha alto, sem escrever
+
+    TypeError: Cannot read properties of undefined (reading 'status')
+
+      837 |
+      838 |     const credits = creditsOf(await entriesOf(scenario));
+    > 839 |     expect(credits[0].status).toBe('approved');
+          |                       ^
+      840 |   });
+      841 | });
+      842 |
+
+      at Object.<anonymous> (__tests__/integration/commissionJob.test.js:839:23)
+
+----------|---------|----------|---------|---------|-------------------
+File      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+----------|---------|----------|---------|---------|-------------------
+All files |       0 |        0 |       0 |       0 |                   
+----------|---------|----------|---------|---------|-------------------
+Test Suites: 1 failed, 1 total
+Tests:       19 failed, 6 passed, 25 total
+Snapshots:   0 total
+Time:        4.614 s
+Ran all test suites matching /__tests__\/integration\/commissionJob.test.js/i.
+----------|---------|----------|---------|---------|-------------------
+File      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+----------|---------|----------|---------|---------|-------------------
+All files |       0 |        0 |       0 |       0 |                   
+----------|---------|----------|---------|---------|-------------------
+Test Suites: 1 failed, 1 total
+Tests:       19 failed, 6 passed, 25 total
+Snapshots:   0 total
+Time:        4.621 s
+Ran all test suites matching /__tests__\/integration\/commissionJob.test.js/i.

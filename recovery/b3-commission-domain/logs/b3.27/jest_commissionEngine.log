@@ -1,0 +1,1099 @@
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+  console.warn
+    [WARN] [commission] agente sem defaultCommissionPlanId — nenhuma comissão gerada {
+      subscriptionId: 'sub_B35_259861_5',
+      paymentId: 'pay_B35_259861_6',
+      tenantId: 926,
+      salesAgentId: '99e4fe93-0622-411e-b46d-43cb607bad44'
+    }
+
+      3 | module.exports = {
+      4 |     info: (...msg) => console.log('[INFO]', ...msg),
+    > 5 |     warn: (...msg) => console.warn('[WARN]', ...msg),
+        |                               ^
+      6 |     error: (...msg) => console.error('[ERROR]', ...msg)
+      7 |   };
+      8 |   
+
+      at Object.warn (app/utils/logger.js:5:31)
+      at Object.processCommissionFromPayment (app/services/commissionEngine.js:418:18)
+      at pay (__tests__/integration/commissionEngine.test.js:110:5)
+      at Object.<anonymous> (__tests__/integration/commissionEngine.test.js:187:5)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B35_259861_9',
+      paymentId: 'pay_B35_259861_10',
+      tenantId: 927,
+      salesAgentId: 'ba789141-2124-487d-b246-eff3a21e289b',
+      salesAgentCommissionId: '9681d9a5-68c7-4309-bf4e-749237e5fd38',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B35_259861_13',
+      paymentId: 'pay_B35_259861_14',
+      tenantId: 928,
+      salesAgentId: '0ae995f2-cf6e-483b-b30e-f0f63c2c2dec',
+      salesAgentCommissionId: '55679db8-0cac-45c0-ad32-b400eac5c724',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B35_259861_13',
+      paymentId: 'pay_B35_259861_15',
+      tenantId: 928,
+      salesAgentId: '0ae995f2-cf6e-483b-b30e-f0f63c2c2dec',
+      salesAgentCommissionId: '55679db8-0cac-45c0-ad32-b400eac5c724',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B35_259861_18',
+      paymentId: 'pay_B35_259861_19',
+      tenantId: 929,
+      salesAgentId: '87fb4551-0e17-4996-8ee7-5209f0c246b4',
+      salesAgentCommissionId: '3171e99c-7657-439c-b914-1cb387a37397',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B35_259861_18',
+      paymentId: 'pay_B35_259861_20',
+      tenantId: 929,
+      salesAgentId: '87fb4551-0e17-4996-8ee7-5209f0c246b4',
+      salesAgentCommissionId: '3171e99c-7657-439c-b914-1cb387a37397',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B35_259861_23',
+      paymentId: 'pay_B35_259861_24',
+      tenantId: 930,
+      salesAgentId: '5535b2c0-7b33-499b-918e-e4347c8754c7',
+      salesAgentCommissionId: '7d885b52-0776-443b-9521-366c84c263a9',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B35_259861_23',
+      paymentId: 'pay_B35_259861_25',
+      tenantId: 930,
+      salesAgentId: '5535b2c0-7b33-499b-918e-e4347c8754c7',
+      salesAgentCommissionId: '7d885b52-0776-443b-9521-366c84c263a9',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B35_259861_28',
+      paymentId: 'pay_B35_259861_29',
+      tenantId: 931,
+      salesAgentId: '23116f9a-aa5e-4f9d-ab9f-4d8ddcba1319',
+      salesAgentCommissionId: '4d23baa5-097e-41fb-b994-522b84ed3770',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B35_259861_28',
+      paymentId: 'pay_B35_259861_30',
+      tenantId: 931,
+      salesAgentId: '23116f9a-aa5e-4f9d-ab9f-4d8ddcba1319',
+      salesAgentCommissionId: '4d23baa5-097e-41fb-b994-522b84ed3770',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B35_259861_28',
+      paymentId: 'pay_B35_259861_31',
+      tenantId: 931,
+      salesAgentId: '23116f9a-aa5e-4f9d-ab9f-4d8ddcba1319',
+      salesAgentCommissionId: '4d23baa5-097e-41fb-b994-522b84ed3770',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B35_259861_34',
+      paymentId: 'pay_B35_259861_35',
+      tenantId: 932,
+      salesAgentId: '0588aad1-9ee8-42b5-a2b4-2c345eecafe8',
+      salesAgentCommissionId: 'dac641fc-726c-408f-8ef7-085048a96831',
+      segments: 3,
+      unitsToApply: 12,
+      consumedAfter: 12,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B35_259861_38',
+      paymentId: 'pay_B35_259861_39',
+      tenantId: 933,
+      salesAgentId: 'af384757-a36e-4e87-be1a-befea53fa70a',
+      salesAgentCommissionId: '85b0c08a-3eac-4b4a-a68f-25d93b64607b',
+      segments: 2,
+      unitsToApply: 12,
+      consumedAfter: 12,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B35_259861_42',
+      paymentId: 'pay_B35_259861_43',
+      tenantId: 934,
+      salesAgentId: '199d16b7-f703-4718-add6-eab167148a87',
+      salesAgentCommissionId: 'f0a9a888-2f81-4b59-b153-a81a7d81a345',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B35_259861_46',
+      paymentId: 'pay_B35_259861_47',
+      tenantId: 935,
+      salesAgentId: '7517edff-4c62-4196-8a63-d8e7db86ced5',
+      salesAgentCommissionId: '74be4783-4911-4dfa-bdd2-eb66999104ce',
+      segments: 1,
+      unitsToApply: 3,
+      consumedAfter: 3,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B35_259861_50',
+      paymentId: 'pay_B35_259861_51',
+      tenantId: 936,
+      salesAgentId: '270f8a00-36f5-4f3f-911b-94c92c975806',
+      salesAgentCommissionId: '6cef7ca8-0cc5-4f61-ab14-ea65d2dabec9',
+      segments: 1,
+      unitsToApply: 12,
+      consumedAfter: 12,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B35_259861_54',
+      paymentId: 'pay_B35_259861_55',
+      tenantId: 937,
+      salesAgentId: 'c5239e43-3a0b-445f-becd-841b9d199ed0',
+      salesAgentCommissionId: '5c7638fa-5513-4b08-a5b4-3e4f9cdd56b2',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.error
+    [ERROR] [commission] falha ao processar comissão {
+      subscriptionId: 'sub_B35_259861_58',
+      paymentId: 'pay_B35_259861_59',
+      tenantId: 938,
+      salesAgentId: 'bf75e74e-7f4e-4abf-8a4c-2a3e551e2689',
+      salesAgentCommissionId: '4ae3a392-58fa-45d8-9d09-e676d18976ff',
+      error: 'billingCycle indeterminado na signature 961 — comissão abortada'
+    }
+
+      4 |     info: (...msg) => console.log('[INFO]', ...msg),
+      5 |     warn: (...msg) => console.warn('[WARN]', ...msg),
+    > 6 |     error: (...msg) => console.error('[ERROR]', ...msg)
+        |                                ^
+      7 |   };
+      8 |   
+
+      at Object.error (app/utils/logger.js:6:32)
+      at Object.processCommissionFromPayment (app/services/commissionEngine.js:604:14)
+      at pay (__tests__/integration/commissionEngine.test.js:110:5)
+      at Object.<anonymous> (__tests__/integration/commissionEngine.test.js:449:5)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B35_259861_62',
+      paymentId: 'pay_B35_259861_63',
+      tenantId: 939,
+      salesAgentId: 'b53dcc36-7ea1-49fe-84c4-30fe67cccc1e',
+      salesAgentCommissionId: '1d7fa1a3-6a11-47f4-84bb-0714140710a0',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B35_259861_62',
+      paymentId: 'pay_B35_259861_64',
+      tenantId: 939,
+      salesAgentId: 'b53dcc36-7ea1-49fe-84c4-30fe67cccc1e',
+      salesAgentCommissionId: '1d7fa1a3-6a11-47f4-84bb-0714140710a0',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B35_259861_62',
+      paymentId: 'pay_B35_259861_65',
+      tenantId: 939,
+      salesAgentId: 'b53dcc36-7ea1-49fe-84c4-30fe67cccc1e',
+      salesAgentCommissionId: '1d7fa1a3-6a11-47f4-84bb-0714140710a0',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B35_259861_62',
+      paymentId: 'pay_B35_259861_66',
+      tenantId: 939,
+      salesAgentId: 'b53dcc36-7ea1-49fe-84c4-30fe67cccc1e',
+      salesAgentCommissionId: '1d7fa1a3-6a11-47f4-84bb-0714140710a0',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B35_259861_62',
+      paymentId: 'pay_B35_259861_67',
+      tenantId: 939,
+      salesAgentId: 'b53dcc36-7ea1-49fe-84c4-30fe67cccc1e',
+      salesAgentCommissionId: '1d7fa1a3-6a11-47f4-84bb-0714140710a0',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B35_259861_62',
+      paymentId: 'pay_B35_259861_68',
+      tenantId: 939,
+      salesAgentId: 'b53dcc36-7ea1-49fe-84c4-30fe67cccc1e',
+      salesAgentCommissionId: '1d7fa1a3-6a11-47f4-84bb-0714140710a0',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B35_259861_62',
+      paymentId: 'pay_B35_259861_69',
+      tenantId: 939,
+      salesAgentId: 'b53dcc36-7ea1-49fe-84c4-30fe67cccc1e',
+      salesAgentCommissionId: '1d7fa1a3-6a11-47f4-84bb-0714140710a0',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B35_259861_62',
+      paymentId: 'pay_B35_259861_70',
+      tenantId: 939,
+      salesAgentId: 'b53dcc36-7ea1-49fe-84c4-30fe67cccc1e',
+      salesAgentCommissionId: '1d7fa1a3-6a11-47f4-84bb-0714140710a0',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B35_259861_62',
+      paymentId: 'pay_B35_259861_71',
+      tenantId: 939,
+      salesAgentId: 'b53dcc36-7ea1-49fe-84c4-30fe67cccc1e',
+      salesAgentCommissionId: '1d7fa1a3-6a11-47f4-84bb-0714140710a0',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B35_259861_62',
+      paymentId: 'pay_B35_259861_72',
+      tenantId: 939,
+      salesAgentId: 'b53dcc36-7ea1-49fe-84c4-30fe67cccc1e',
+      salesAgentCommissionId: '1d7fa1a3-6a11-47f4-84bb-0714140710a0',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B35_259861_62',
+      paymentId: 'pay_B35_259861_73',
+      tenantId: 939,
+      salesAgentId: 'b53dcc36-7ea1-49fe-84c4-30fe67cccc1e',
+      salesAgentCommissionId: '1d7fa1a3-6a11-47f4-84bb-0714140710a0',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B35_259861_62',
+      paymentId: 'pay_B35_259861_74',
+      tenantId: 939,
+      salesAgentId: 'b53dcc36-7ea1-49fe-84c4-30fe67cccc1e',
+      salesAgentCommissionId: '1d7fa1a3-6a11-47f4-84bb-0714140710a0',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B35_259861_77',
+      paymentId: 'pay_B35_259861_78',
+      tenantId: 940,
+      salesAgentId: '14cb4392-1eee-43c2-bb19-433d5429493c',
+      salesAgentCommissionId: '6e909c8c-791c-429e-a2ed-7c20a4dfd773',
+      segments: 1,
+      unitsToApply: 6,
+      consumedAfter: 6,
+      status: 'completed'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B35_259861_81',
+      paymentId: 'pay_B35_259861_82',
+      tenantId: 941,
+      salesAgentId: '3b6d6162-2f31-4f15-ab1e-355b1fce2c0d',
+      salesAgentCommissionId: '8e068686-a7b3-45b9-a5a7-f7111bc9a6f2',
+      segments: 1,
+      unitsToApply: 12,
+      consumedAfter: 12,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B35_259861_81',
+      paymentId: 'pay_B35_259861_83',
+      tenantId: 941,
+      salesAgentId: '3b6d6162-2f31-4f15-ab1e-355b1fce2c0d',
+      salesAgentCommissionId: '8e068686-a7b3-45b9-a5a7-f7111bc9a6f2',
+      segments: 1,
+      unitsToApply: 12,
+      consumedAfter: 12,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B35_259861_86',
+      paymentId: 'pay_B35_259861_87',
+      tenantId: 942,
+      salesAgentId: '810c0ca7-bb5c-441d-9cd1-9535b5ec49c3',
+      salesAgentCommissionId: '62332c18-2bb6-47ef-9481-356346b9b0a4',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] pagamento já processado nesse contrato — ignorando {
+      subscriptionId: 'sub_B35_259861_86',
+      paymentId: 'pay_B35_259861_87',
+      tenantId: 942,
+      salesAgentId: '810c0ca7-bb5c-441d-9cd1-9535b5ec49c3',
+      salesAgentCommissionId: '62332c18-2bb6-47ef-9481-356346b9b0a4'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] pagamento já processado nesse contrato — ignorando {
+      subscriptionId: 'sub_B35_259861_86',
+      paymentId: 'pay_B35_259861_87',
+      tenantId: 942,
+      salesAgentId: '810c0ca7-bb5c-441d-9cd1-9535b5ec49c3',
+      salesAgentCommissionId: '62332c18-2bb6-47ef-9481-356346b9b0a4'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B35_259861_90',
+      paymentId: 'pay_B35_259861_93',
+      tenantId: 943,
+      salesAgentId: '670fee1a-852c-4b36-a6b1-70659ee080a9',
+      salesAgentCommissionId: '77983a8c-93ae-4b0e-a420-a7c5747f4aa4',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B35_259861_92',
+      paymentId: 'pay_B35_259861_93',
+      tenantId: 944,
+      salesAgentId: 'd79119cd-21b5-43e3-b6a0-ecaf77a74290',
+      salesAgentCommissionId: '5a6144f7-98d2-4c15-ac15-91ee4e9d7b1b',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B35_259861_96',
+      paymentId: 'pay_B35_259861_97',
+      tenantId: 945,
+      salesAgentId: '8caaf6e3-f897-40fc-8daf-75e3b1981301',
+      salesAgentCommissionId: '427becdf-4636-4c2a-ad12-4b598374e4cb',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B35_259861_96',
+      paymentId: 'pay_B35_259861_98',
+      tenantId: 945,
+      salesAgentId: '8caaf6e3-f897-40fc-8daf-75e3b1981301',
+      salesAgentCommissionId: '427becdf-4636-4c2a-ad12-4b598374e4cb',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B35_259861_96',
+      paymentId: 'pay_B35_259861_99',
+      tenantId: 945,
+      salesAgentId: '8caaf6e3-f897-40fc-8daf-75e3b1981301',
+      salesAgentCommissionId: '427becdf-4636-4c2a-ad12-4b598374e4cb',
+      segments: 1,
+      unitsToApply: 1,
+      consumedAfter: 1,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.error
+    [ERROR] [commission] falha ao processar comissão {
+      subscriptionId: 'sub_B35_259861_102',
+      paymentId: 'pay_B35_259861_103',
+      tenantId: 946,
+      salesAgentId: '42efa190-28cb-4cfd-9059-b17a6a16c61e',
+      salesAgentCommissionId: 'dfa57514-5bbd-43c0-ba96-1932662112d3',
+      error: 'INSERT explodiu'
+    }
+
+      4 |     info: (...msg) => console.log('[INFO]', ...msg),
+      5 |     warn: (...msg) => console.warn('[WARN]', ...msg),
+    > 6 |     error: (...msg) => console.error('[ERROR]', ...msg)
+        |                                ^
+      7 |   };
+      8 |   
+
+      at Object.error (app/utils/logger.js:6:32)
+      at Object.processCommissionFromPayment (app/services/commissionEngine.js:604:14)
+      at pay (__tests__/integration/commissionEngine.test.js:110:5)
+      at Object.<anonymous> (__tests__/integration/commissionEngine.test.js:614:5)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B35_259861_106',
+      paymentId: 'pay_B35_259861_107',
+      tenantId: 947,
+      salesAgentId: 'e72990e9-3704-4be4-9095-2998546f0a3e',
+      salesAgentCommissionId: 'b551b777-0831-4723-9017-9f27486f7c90',
+      segments: 2,
+      unitsToApply: 12,
+      consumedAfter: 12,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+  console.log
+    [INFO] [commission] comissão lançada {
+      subscriptionId: 'sub_B35_259861_110',
+      paymentId: 'pay_B35_259861_111',
+      tenantId: 948,
+      salesAgentId: '6e823daf-d372-449c-838f-e502270c7c90',
+      salesAgentCommissionId: '34ccef4e-401a-4eae-a4cf-39723f5e9643',
+      segments: 1,
+      unitsToApply: 3,
+      consumedAfter: 3,
+      status: 'active'
+    }
+
+      at Object.info (app/utils/logger.js:4:31)
+
+FAIL __tests__/integration/commissionEngine.test.js
+  B3.5 — resolução do agente e do plano
+    ✓ 1. tenant sem SalesAgent não gera comissão (46 ms)
+    ✓ 2. agente sem defaultCommissionPlanId não gera comissão e registra log (65 ms)
+  B3.5 — contrato e snapshot
+    ✓ 3. primeiro pagamento fecha o contrato e copia as faixas (84 ms)
+    ✓ 4. segundo pagamento reutiliza o contrato e não recria terms (95 ms)
+    ✕ mudar o plano depois não muda o contrato já fechado (93 ms)
+  B3.5 — faixas e percentuais
+    ✕ 5. faixa única aplica o mesmo percentual em todo pagamento (79 ms)
+    ✕ 6. primeiro mês com percentual diferente dos demais (103 ms)
+    ✕ 7 + 13 + 14. pagamento anual atravessa três faixas e rateia o valor (61 ms)
+    ✕ 15. resíduo de centavos cai determinísticamente no último segmento (58 ms)
+    ✓ cálculo puro: buildSegments recorta as faixas pelo intervalo do pagamento (1 ms)
+    ✓ cálculo puro: allocateBases fecha a soma das bases (1 ms)
+  B3.5 — unidade de consumo por billingCycle
+    ✕ 10. monthly consome as unidades certas (50 ms)
+    ✕ 11. quarterly consome as unidades certas (49 ms)
+    ✕ 12. annual consome as unidades certas (51 ms)
+    ✕ basis = payment conta 1 unidade por pagamento, ignorando o ciclo (50 ms)
+    ✓ billingCycle indeterminado aborta com erro explícito (nunca assume 1) (62 ms)
+  B3.5 — limite do contrato
+    ✕ 8 + 9 + 19. contrato de 12 unidades completa no 12º e ignora o 13º (385 ms)
+    ✕ pagamento anual além do limite comissiona só as unidades restantes (60 ms)
+    ✕ 20. contrato sem totalUnits permanece active indefinidamente (69 ms)
+  B3.5 — idempotência e consumo derivado
+    ✓ 16. mesmo paymentId no mesmo contrato não duplica comissão (64 ms)
+    ✓ 17. dois contratos diferentes podem usar o mesmo paymentId (95 ms)
+    ✕ 18. consumedUnits é derivado dos installments, não de paidInstallments (92 ms)
+  B3.5 — erros e transação
+    ✓ 21. falha no INSERT sobe para o caller, sem catch silencioso (48 ms)
+    ✓ 22. todo insert usa a transaction recebida — rollback não deixa rastro (56 ms)
+    ✓ subscriptionId ou paymentId ausente não faz nada (1 ms)
+    ✓ signature inexistente não gera comissão (2 ms)
+  B3.5 — memória de cálculo do lançamento
+    ✕ o lançamento guarda contexto do pagamento e a memória do cálculo (50 ms)
+
+  ● B3.5 — contrato e snapshot › mudar o plano depois não muda o contrato já fechado
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 2
+
+      Array [
+    -   30,
+    -   30,
+    +   NaN,
+    +   NaN,
+      ]
+
+      277 |
+      278 |     const entries = await entriesOf(scenario);
+    > 279 |     expect(entries.map((e) => money(e.percentApplied))).toEqual([30, 30]);
+          |                                                         ^
+      280 |     expect((await contractOf(scenario)).totalUnits).toBeNull();
+      281 |   });
+      282 | });
+
+      at Object.<anonymous> (__tests__/integration/commissionEngine.test.js:279:57)
+
+  ● B3.5 — faixas e percentuais › 5. faixa única aplica o mesmo percentual em todo pagamento
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 4
+    + Received  + 4
+
+      Array [
+        Array [
+    -     1,
+    -     1,
+    +     undefined,
+    +     undefined,
+        ],
+        Array [
+    -     2,
+    -     2,
+    +     undefined,
+    +     undefined,
+        ],
+      ]
+
+      297 |     expect(entries).toHaveLength(2);
+      298 |     expect(entries.map((e) => money(e.amount))).toEqual([50, 50]);
+    > 299 |     expect(entries.map((e) => [e.unitFrom, e.unitTo])).toEqual([[1, 1], [2, 2]]);
+          |                                                        ^
+      300 |   });
+      301 |
+      302 |   test('6. primeiro mês com percentual diferente dos demais', async () => {
+
+      at Object.<anonymous> (__tests__/integration/commissionEngine.test.js:299:56)
+
+  ● B3.5 — faixas e percentuais › 6. primeiro mês com percentual diferente dos demais
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 2
+
+      Array [
+        50,
+    -   10,
+    -   10,
+    +   50,
+    +   50,
+      ]
+
+      315 |
+      316 |     const entries = await entriesOf(scenario);
+    > 317 |     expect(entries.map((e) => money(e.amount))).toEqual([50, 10, 10]);
+          |                                                 ^
+      318 |     expect(entries.map((e) => money(e.percentApplied))).toEqual([50, 10, 10]);
+      319 |   });
+      320 |
+
+      at Object.<anonymous> (__tests__/integration/commissionEngine.test.js:317:49)
+
+  ● B3.5 — faixas e percentuais › 7 + 13 + 14. pagamento anual atravessa três faixas e rateia o valor
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 9
+    + Received  + 9
+
+      Array [
+        Array [
+    -     1,
+    -     1,
+    -     1,
+    +     undefined,
+    +     undefined,
+    +     undefined,
+        ],
+        Array [
+    -     2,
+    -     4,
+    -     3,
+    +     undefined,
+    +     undefined,
+    +     undefined,
+        ],
+        Array [
+    -     5,
+    -     12,
+    -     8,
+    +     undefined,
+    +     undefined,
+    +     undefined,
+        ],
+      ]
+
+      335 |     expect(entries).toHaveLength(3);
+      336 |
+    > 337 |     expect(entries.map((e) => [e.unitFrom, e.unitTo, e.unitsCovered])).toEqual([
+          |                                                                        ^
+      338 |       [1, 1, 1], [2, 4, 3], [5, 12, 8],
+      339 |     ]);
+      340 |     // base = 2160 * unidades / 12
+
+      at Object.<anonymous> (__tests__/integration/commissionEngine.test.js:337:72)
+
+  ● B3.5 — faixas e percentuais › 15. resíduo de centavos cai determinísticamente no último segmento
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 2
+
+      Array [
+    -   8.33,
+    -   91.67,
+    +   NaN,
+    +   NaN,
+      ]
+
+      368 |
+      369 |     const entries = await entriesOf(scenario);
+    > 370 |     expect(entries.map((e) => money(e.baseAmount))).toEqual([8.33, 91.67]);
+          |                                                     ^
+      371 |     expect(money(entries.reduce((a, e) => a + money(e.baseAmount), 0))).toBe(100);
+      372 |     expect(entries.map((e) => money(e.amount))).toEqual([3.33, 18.33]);
+      373 |   });
+
+      at Object.<anonymous> (__tests__/integration/commissionEngine.test.js:370:53)
+
+  ● B3.5 — unidade de consumo por billingCycle › 10. monthly consome as unidades certas
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 2
+
+      Array [
+        Array [
+    -     1,
+    -     1,
+    +     undefined,
+    +     undefined,
+        ],
+      ]
+
+      418 |
+      419 |     const entries = await entriesOf(scenario);
+    > 420 |     expect(entries.map((e) => [e.unitFrom, e.unitTo])).toEqual(ranges);
+          |                                                        ^
+      421 |     expect(entries[0].unitsCovered).toBe(units);
+      422 |     expect(money(entries[0].baseAmount)).toBe(120);
+      423 |     expect(money(entries[0].amount)).toBe(12);
+
+      at __tests__/integration/commissionEngine.test.js:420:56
+
+  ● B3.5 — unidade de consumo por billingCycle › 11. quarterly consome as unidades certas
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 2
+
+      Array [
+        Array [
+    -     1,
+    -     3,
+    +     undefined,
+    +     undefined,
+        ],
+      ]
+
+      418 |
+      419 |     const entries = await entriesOf(scenario);
+    > 420 |     expect(entries.map((e) => [e.unitFrom, e.unitTo])).toEqual(ranges);
+          |                                                        ^
+      421 |     expect(entries[0].unitsCovered).toBe(units);
+      422 |     expect(money(entries[0].baseAmount)).toBe(120);
+      423 |     expect(money(entries[0].amount)).toBe(12);
+
+      at __tests__/integration/commissionEngine.test.js:420:56
+
+  ● B3.5 — unidade de consumo por billingCycle › 12. annual consome as unidades certas
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 2
+
+      Array [
+        Array [
+    -     1,
+    -     12,
+    +     undefined,
+    +     undefined,
+        ],
+      ]
+
+      418 |
+      419 |     const entries = await entriesOf(scenario);
+    > 420 |     expect(entries.map((e) => [e.unitFrom, e.unitTo])).toEqual(ranges);
+          |                                                        ^
+      421 |     expect(entries[0].unitsCovered).toBe(units);
+      422 |     expect(money(entries[0].baseAmount)).toBe(120);
+      423 |     expect(money(entries[0].amount)).toBe(12);
+
+      at __tests__/integration/commissionEngine.test.js:420:56
+
+  ● B3.5 — unidade de consumo por billingCycle › basis = payment conta 1 unidade por pagamento, ignorando o ciclo
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 2
+
+      Array [
+    -   1,
+    -   1,
+    +   undefined,
+    +   undefined,
+      ]
+
+      436 |     const entries = await entriesOf(scenario);
+      437 |     expect(entries).toHaveLength(1);
+    > 438 |     expect([entries[0].unitFrom, entries[0].unitTo]).toEqual([1, 1]);
+          |                                                      ^
+      439 |     expect(money(entries[0].baseAmount)).toBe(1200);
+      440 |   });
+      441 |
+
+      at Object.<anonymous> (__tests__/integration/commissionEngine.test.js:438:54)
+
+  ● B3.5 — limite do contrato › 8 + 9 + 19. contrato de 12 unidades completa no 12º e ignora o 13º
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "completed"
+    Received: "active"
+
+      474 |
+      475 |     await pay(scenario, { value: 100, paymentId: uid('pay') });
+    > 476 |     expect((await contractOf(scenario)).status).toBe('completed');
+          |                                                 ^
+      477 |     expect(await entriesOf(scenario)).toHaveLength(12);
+      478 |
+      479 |     // 13º mês: nada é gerado
+
+      at Object.<anonymous> (__tests__/integration/commissionEngine.test.js:476:49)
+
+  ● B3.5 — limite do contrato › pagamento anual além do limite comissiona só as unidades restantes
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 3
+
+      Array [
+    -   1,
+    -   6,
+    -   6,
+    +   undefined,
+    +   undefined,
+    +   undefined,
+      ]
+
+      499 |     const entries = await entriesOf(scenario);
+      500 |     expect(entries).toHaveLength(1);
+    > 501 |     expect([entries[0].unitFrom, entries[0].unitTo, entries[0].unitsCovered]).toEqual([1, 6, 6]);
+          |                                                                               ^
+      502 |     // rateio sobre 6 das 12 unidades do pagamento
+      503 |     expect(money(entries[0].baseAmount)).toBe(600);
+      504 |     expect(money(entries[0].amount)).toBe(60);
+
+      at Object.<anonymous> (__tests__/integration/commissionEngine.test.js:501:79)
+
+  ● B3.5 — limite do contrato › 20. contrato sem totalUnits permanece active indefinidamente
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 4
+    + Received  + 4
+
+      Array [
+        Array [
+    -     1,
+    -     12,
+    +     undefined,
+    +     undefined,
+        ],
+        Array [
+    -     13,
+    -     24,
+    +     undefined,
+    +     undefined,
+        ],
+      ]
+
+      521 |
+      522 |     const entries = await entriesOf(scenario);
+    > 523 |     expect(entries.map((e) => [e.unitFrom, e.unitTo])).toEqual([[1, 12], [13, 24]]);
+          |                                                        ^
+      524 |   });
+      525 | });
+      526 |
+
+      at Object.<anonymous> (__tests__/integration/commissionEngine.test.js:523:56)
+
+  ● B3.5 — idempotência e consumo derivado › 18. consumedUnits é derivado dos installments, não de paidInstallments
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 3
+
+      Array [
+    -   1,
+    -   2,
+    -   3,
+    +   undefined,
+    +   undefined,
+    +   undefined,
+      ]
+
+      586 |     await pay(scenario, { value: 100, paymentId: uid('pay') });
+      587 |     let entries = await entriesOf(scenario);
+    > 588 |     expect(entries.map((e) => e.unitFrom)).toEqual([1, 2, 3]);
+          |                                            ^
+      589 |
+      590 |     // Apagando um lançamento, o consumo recua — porque é derivado
+      591 |     await entries[2].destroy();
+
+      at Object.<anonymous> (__tests__/integration/commissionEngine.test.js:588:44)
+
+  ● B3.5 — memória de cálculo do lançamento › o lançamento guarda contexto do pagamento e a memória do cálculo
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "quarterly"
+    Received: undefined
+
+      699 |     expect(entry.paymentId).toBe(paymentId);
+      700 |     expect(entry.referenceMonth).toBe('2026-03');
+    > 701 |     expect(entry.billingCycle).toBe('quarterly');
+          |                                ^
+      702 |     expect(entry.termId).toBe(contract.terms[0].id);
+      703 |     expect(entry.unitsCovered).toBe(3);
+      704 |     expect(money(entry.baseAmount)).toBe(300);
+
+      at Object.<anonymous> (__tests__/integration/commissionEngine.test.js:701:32)
+
+----------|---------|----------|---------|---------|-------------------
+File      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+----------|---------|----------|---------|---------|-------------------
+All files |       0 |        0 |       0 |       0 |                   
+----------|---------|----------|---------|---------|-------------------
+Test Suites: 1 failed, 1 total
+Tests:       14 failed, 13 passed, 27 total
+Snapshots:   0 total
+Time:        4.764 s
+Ran all test suites matching /__tests__\/integration\/commissionEngine.test.js/i.
+----------|---------|----------|---------|---------|-------------------
+File      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+----------|---------|----------|---------|---------|-------------------
+All files |       0 |        0 |       0 |       0 |                   
+----------|---------|----------|---------|---------|-------------------
+Test Suites: 1 failed, 1 total
+Tests:       14 failed, 13 passed, 27 total
+Snapshots:   0 total
+Time:        4.772 s
+Ran all test suites matching /__tests__\/integration\/commissionEngine.test.js/i.

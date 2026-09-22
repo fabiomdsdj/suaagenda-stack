@@ -1,0 +1,784 @@
+--- /home/fabiomdsdj/Documents/sistema/suaagenda-stack/api/app/jobs/commissionJob.js	2026-09-22 13:47:46.655818575 -0300
++++ /tmp/claude-1000/-home-fabiomdsdj-Documents-sistema-suaagenda-stack/cc9798b5-cd03-4711-ba16-96ac95a2ca5a/scratchpad/b3.26/integration/commissionJob.recuperado.js	2026-09-22 17:12:45.418530163 -0300
+@@ -1,139 +1,677 @@
+-const axios = require('axios');
+-const { Op } = require('sequelize');
+-const { format, subMonths } = require('date-fns');
+-
+-const {
+-  sequelize,
+-  SalesAgent,
+-  SalesAgentComission,
+-  SalesAgentComissionInstallment
+-} = require('../models');
+-
+-const asaasApi = axios.create({
+-  baseURL: process.env.ASAAS_BASE_URL,
+-  headers: {
+-    'Content-Type': 'application/json',
+-    access_token: process.env.ASAAS_API_KEY
+-  }
+-});
+-
+-// ================================
+-// 1️⃣ APROVAR COMISSÕES (+7 dias)
+-// ================================
+-async function approveCommissions() {
+-
+-  const sevenDaysAgo = new Date();
+-  sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+-
+-  await SalesAgentComissionInstallment.update(
+-    {
+-      status: 'approved',
+-      approvedAt: new Date()
+-    },
+-    {
+-      where: {
+-        status: 'pending',
+-        dueDate: { [Op.lte]: sevenDaysAgo }
+-      }
+-    }
+-  );
++// ============================================================================
++// COMMISSION JOB — B3.8 (orquestração do repasse)
++//
++// Este job NÃO tem regra financeira. Ele é um ORQUESTRADOR fino em cima de
++// `services/commissionPayout`:
++//
++//   seleciona elegíveis (listApprovableInstallments / listPayableInstallments)
++//     → agrupa por agente
++//       → transaction
++//         → payout.approveInstallments(ids, t)      pending  → approved
++//         → payout.payApprovedInstallments(ids, t)  approved → paid
++//       → integração externa FORA da transaction
++//     → resultado/log
++//
++// O que este arquivo NUNCA faz (tudo isso pertence aos services de B3.5/B3.6/B3.7):
++//   cálculo de comissão, percentual, faixas, unidades, consumo, cálculo de
++//   estorno, saldo líquido, transição manual de status, geração de
++//   payoutBatchId, UPDATE direto em installment, leitura do plano atual.
++//
++// ---------------------------------------------------------------------------
++// LACUNA CONHECIDA — liquidação externa (PIX) — LEIA ANTES DE LIGAR O CRON
++// ---------------------------------------------------------------------------
++// O único mecanismo de pagamento externo que existe hoje no projeto é o POST
++// `/transfers` do Asaas, que o job antigo disparava DENTRO da transaction do
++// MySQL (B3.7 apontou isso). Uma API externa não participa da transaction: se
++// o COMMIT falha depois do POST, o dinheiro saiu e o banco não registrou.
++//
++// Nenhum estado do repasse externo é persistido hoje: não há coluna de
++// transferId, nem de externalReference, nem tabela de tentativa. Sem isso é
++// IMPOSSÍVEL provar, numa reexecução, se um lote já foi transferido. Criar
++// esse estado exigiria migration, o que está fora deste ciclo.
++//
++// Por isso B3.8 para no ponto seguro e SEPARA as duas coisas:
++//
++//   settlement: 'none'        (padrão) — nada é marcado como `paid`. O job só
++//                             aprova e RELATA a fila pagável. Sem liquidação
++//                             externa não há como afirmar que o repasse
++//                             aconteceu, e `paid` não é carimbo de seleção.
++//
++//   settlement: 'external'    — exige `transfer`. A transferência roda FORA da
++//                             transaction e ANTES do commit contábil; só um
++//                             retorno bem-sucedido autoriza `paid`. Falha na
++//                             transferência deixa o lote em `approved`
++//                             (reexecução segura). Sucesso da transferência
++//                             seguido de falha no commit é registrado como
++//                             INCONSISTÊNCIA EXPLÍCITA (logger.error + erro no
++//                             resultado), nunca em silêncio.
++//                             Resíduo NÃO resolvido neste ciclo: se o processo
++//                             morrer entre o retorno do PIX e o commit, a
++//                             próxima execução não tem como saber que o lote
++//                             já foi transferido e pode pagar de novo. Fechar
++//                             isso depende de estado persistido (migration).
++//
++//   settlement: 'accounting'  — marca `paid` SEM liquidação externa, para o
++//                             caso em que a transferência foi feita por fora
++//                             do sistema. É opt-in explícito justamente para
++//                             que ninguém confunda fechamento contábil com
++//                             dinheiro transferido.
++//
++// ---------------------------------------------------------------------------
++// FORA DE ESCOPO NESTE CICLO — registrado aqui para não se perder
++// ---------------------------------------------------------------------------
++//   • payoutDueDate: continua NUNCA preenchido. Este job não o escreve nem o
++//     lê; a regra de vencimento do repasse é ciclo próprio. A carência de
++//     aprovação usa `dueDate` (ver DEFAULT_APPROVAL_HOLD_DAYS).
++//
++//   • B3.9 — dashboard/ledger: `app/controllers/salesAgent.controller.js` soma
++//     `amount` sem filtrar `entryType`, então os estornos (amount negativo)
++//     entram no mesmo balde dos créditos. Isso diverge de
++//     `summarizeInstallments`, que separa crédito de estorno. NÃO corrigido
++//     aqui — é ciclo próprio de dashboard/ledger.
++//
++//   • Cleanup — `app/services/salesAgentComission.js`: código legado morto.
++//     Referencia models que não existem (`SalesAgentComission`,
++//     `SalesAgentComissionInstallment` — sem o dobro de 'm'), tem um
++//     `payInstallment()` próprio e mexe em `paidInstallments`. Nenhum arquivo
++//     do projeto o importa, e este job NÃO o usa. Candidato a remoção em
++//     cleanup separado; deixado no lugar para não ampliar o escopo daqui.
++//
++//   • Também fora: CRUD de planos, frontend, payout manual por UI, recuperação
++//     de comissão paga e depois estornada, override pai/filho, tiers por
++//     volume, versionamento de plano, comissão de funcionário, NFS-e, wallet,
++//     novas migrations, agendamento em produção.
++//
++// Este job NÃO está registrado em nenhum cron (não estava antes e continua não
++// estando — agendar é decisão de outro ciclo).
++//
++// IDEMPOTÊNCIA — o que vale e onde para:
++//   O COMMIT CONTÁBIL é idempotente. Reexecutar o job, ou rodar dois workers
++//   ao mesmo tempo, não marca o mesmo lançamento como approved/paid duas
++//   vezes: os row locks e a revalidação dentro da transaction são do
++//   `commissionPayout`, e o worker perdedor falha alto sem escrever.
++//   A LIQUIDAÇÃO EXTERNA não é. Em 'external', dois workers concorrentes
++//   podem ler a mesma fila `approved` e disparar DUAS transferências antes de
++//   qualquer um marcar `paid` — a transferência acontece fora da transaction
++//   e não deixa estado persistido. Enquanto a lacuna acima não for fechada,
++//   'external' pressupõe UM worker por vez.
++// ============================================================================
++
++const { format, subDays } = require('date-fns');
++const logger = require('../utils/logger');
++const commissionPayout = require('../services/commissionPayout');
++
++/** Erro do job com contexto anexado. O job nunca engole erro em silêncio. */
++class CommissionJobError extends Error {
++  constructor(message, context = {}) {
++    super(message);
++    this.name = 'CommissionJobError';
++    this.context = context;
++  }
++}
++
++// Carência herdada do job anterior: só aprova crédito cujo pagamento do tenant
++// já tem pelo menos 7 dias (janela de refund).
++//
++// ATENÇÃO: o campo usado é `dueDate`, que HOJE guarda a data do pagamento do
++// tenant — o engine o preenche só para satisfazer a coluna NOT NULL (ver nota
++// em commissionEngine). `payoutDueDate` continua NUNCA preenchido e NÃO é lido
++// aqui; a regra de vencimento do repasse é um ciclo separado (B3.10+).
++// `approvalHoldDays: 0` desliga a carência.
++const DEFAULT_APPROVAL_HOLD_DAYS = 7;
++
++const SETTLEMENT_MODES = ['none', 'external', 'accounting'];
++
++// ---------------------------------------------------------------------------
++// Dinheiro — só para SOMAR o lote selecionado e conferir contra o service.
++// Nenhum valor é calculado aqui: `installment.amount` já vem congelado.
++// ---------------------------------------------------------------------------
++
++function toCents(value, context) {
++  const n = typeof value === 'number' ? value : parseFloat(String(value));
++  if (!Number.isFinite(n)) {
++    throw new CommissionJobError(`valor de lançamento inválido: ${value}`, context);
++  }
++  return Math.round(n * 100);
++}
+ 
+-  console.log("✅ Comissões antigas aprovadas");
++function centsToAmount(cents) {
++  return (cents / 100).toFixed(2);
+ }
+ 
+-// ================================
+-// 2️⃣ FECHAMENTO MENSAL
+-// ================================
+-async function processMonthlyPayout() {
++// DATEONLY volta como 'YYYY-MM-DD' no MySQL, mas aceita Date se o driver mudar.
++function asDateOnly(value) {
++  if (!value) return null;
++  if (value instanceof Date) return format(value, 'yyyy-MM-dd');
++  return String(value).slice(0, 10);
++}
+ 
+-  const lastMonth = format(subMonths(new Date(), 1), 'yyyy-MM');
++function buildCommissionJob({ models, payout = commissionPayout, log = logger } = {}) {
++  if (!models) {
++    throw new CommissionJobError('models é obrigatório para montar o commissionJob');
++  }
+ 
+-  const installments = await SalesAgentComissionInstallment.findAll({
+-    where: {
+-      status: 'approved',
+-      referenceMonth: lastMonth
+-    },
+-    include: [{
+-      model: SalesAgentComission,
+-      include: [SalesAgent]
+-    }]
+-  });
++  const { sequelize, SalesAgent, SalesAgentCommission } = models;
+ 
+-  if (!installments.length) {
+-    console.log("ℹ️ Nenhuma comissão para pagar no mês:", lastMonth);
+-    return;
++  // -------------------------------------------------------------------------
++  // Agrupamento por agente
++  // -------------------------------------------------------------------------
++
++  /**
++   * Resolve contrato → agente para os lançamentos selecionados.
++   *
++   * O `commissionPayout` trabalha com IDs de lançamento e não conhece agente;
++   * quem monta o lote é o job. Agrupar por agente evita pagamento cruzado
++   * (um lote nunca mistura dois agentes) e deixa a conciliação futura óbvia:
++   * um `payoutBatchId` ↔ um agente.
++   */
++  async function contractsOf(installments) {
++    const contractIds = [...new Set(installments.map((i) => i.salesAgentCommissionId))];
++    if (contractIds.length === 0) return new Map();
++
++    const contracts = await SalesAgentCommission.findAll({
++      where: { id: contractIds },
++      attributes: ['id', 'salesAgentId', 'status'],
++    });
++    return new Map(contracts.map((c) => [c.id, c]));
+   }
+ 
+-  // 🔥 Agrupar por vendedor
+-  const grouped = {};
++  /**
++   * Lotes por agente, em ordem estável (agente, depois id do lançamento).
++   *
++   * A ordem por id importa: dois workers concorrentes pegam as linhas sempre
++   * na mesma sequência e um espera o outro, em vez de se cruzarem em deadlock.
++   */
++  function groupByAgent(installments, contractById, context) {
++    const batches = new Map();
++    const orphans = [];
++
++    for (const installment of installments) {
++      const contract = contractById.get(installment.salesAgentCommissionId);
++
++      // Sem contrato o service recusaria o lançamento e derrubaria o lote
++      // inteiro do agente. Separar aqui mantém o erro localizado e visível.
++      if (!contract) {
++        orphans.push(installment.id);
++        continue;
++      }
+ 
+-  for (const inst of installments) {
++      const agentId = contract.salesAgentId;
++      const batch = batches.get(agentId) || { salesAgentId: agentId, installments: [] };
++      batch.installments.push(installment);
++      batches.set(agentId, batch);
++    }
+ 
+-    const agent = inst.SalesAgentComission.SalesAgent;
++    if (orphans.length) {
++      log.error('[commission-job] lançamentos sem contrato — fora do lote', {
++        ...context,
++        installmentIds: orphans,
++      });
++    }
+ 
+-    if (!grouped[agent.id]) {
+-      grouped[agent.id] = {
+-        agent,
+-        installments: [],
+-        total: 0
++    const ordered = [...batches.values()].map((batch) => {
++      const sorted = [...batch.installments].sort((a, b) => (a.id < b.id ? -1 : 1));
++      let totalCents = 0;
++      for (const installment of sorted) {
++        totalCents += toCents(installment.amount, context);
++      }
++      return {
++        salesAgentId: batch.salesAgentId,
++        installmentIds: sorted.map((i) => i.id),
++        count: sorted.length,
++        // Soma do lote SELECIONADO, usada para conferir contra o total que o
++        // service devolve. Não é recálculo de comissão: é Σ installment.amount.
++        totalAmount: centsToAmount(totalCents),
+       };
++    });
++
++    ordered.sort((a, b) => (a.salesAgentId < b.salesAgentId ? -1 : 1));
++    return { batches: ordered, orphanIds: orphans };
++  }
++
++  // Executa `fn` numa transaction própria do job. O caller (cron) não tem
++  // transaction: o job é a fronteira.
++  async function inTransaction(fn) {
++    const transaction = await sequelize.transaction();
++    try {
++      const result = await fn(transaction);
++      await transaction.commit();
++      return result;
++    } catch (error) {
++      await transaction.rollback();
++      throw error;
++    }
++  }
++
++  // -------------------------------------------------------------------------
++  // 1. Aprovação — pending → approved
++  // -------------------------------------------------------------------------
++
++  /**
++   * Aprova, por agente, os créditos que o service considera aprováveis.
++   *
++   * A elegibilidade NÃO é decidida aqui: `listApprovableInstallments` já
++   * filtra entryType, status e crédito estornado (líquido <= 0). O job só
++   * acrescenta a carência de `approvalHoldDays` — uma regra de QUANDO olhar,
++   * não de QUANTO pagar.
++   */
++  async function approveStage({
++    scope = {},
++    approvalHoldDays = DEFAULT_APPROVAL_HOLD_DAYS,
++    now = new Date(),
++  } = {}) {
++    const context = { flow: 'commission-job-approve' };
++
++    const approvable = await payout.listApprovableInstallments(scope);
++
++    const cutoff = approvalHoldDays > 0
++      ? format(subDays(now, approvalHoldDays), 'yyyy-MM-dd')
++      : null;
++
++    const mature = cutoff
++      ? approvable.filter((entry) => {
++        const dueDate = asDateOnly(entry.dueDate);
++        // Sem data confiável, segura: adiar aprovação nunca paga a mais.
++        return dueDate !== null && dueDate <= cutoff;
++      })
++      : approvable;
++
++    const contractById = await contractsOf(mature);
++    const { batches, orphanIds } = groupByAgent(mature, contractById, context);
++
++    const approved = [];
++    const errors = [];
++
++    for (const batch of batches) {
++      try {
++        const result = await inTransaction((transaction) => (
++          payout.approveInstallments(batch.installmentIds, transaction)
++        ));
++
++        approved.push({
++          salesAgentId: batch.salesAgentId,
++          count: result.count,
++          totalAmount: result.totalAmount,
++          installmentIds: result.installmentIds,
++          approvedAt: result.approvedAt,
++        });
++
++        log.info('[commission-job] lote aprovado', {
++          ...context,
++          salesAgentId: batch.salesAgentId,
++          count: result.count,
++          totalAmount: result.totalAmount,
++        });
++      } catch (error) {
++        // Falha de um agente não derruba os outros — mas nunca some: vai para
++        // o log de erro E para o resultado devolvido ao caller.
++        errors.push({
++          stage: 'approve',
++          salesAgentId: batch.salesAgentId,
++          installmentIds: batch.installmentIds,
++          message: error.message,
++          error,
++        });
++        log.error('[commission-job] falha ao aprovar lote', {
++          ...context,
++          salesAgentId: batch.salesAgentId,
++          installmentIds: batch.installmentIds,
++          message: error.message,
++        });
++      }
+     }
+ 
+-    grouped[agent.id].installments.push(inst);
+-    grouped[agent.id].total += parseFloat(inst.amount);
++    return {
++      candidates: approvable.length,
++      eligible: mature.length,
++      heldBack: approvable.length - mature.length,
++      cutoff,
++      orphanIds,
++      approved,
++      errors,
++    };
+   }
+ 
+-  // 🔥 Para cada vendedor gerar transferência
+-  for (const agentId in grouped) {
++  // -------------------------------------------------------------------------
++  // 2. Repasse — approved → paid (+ liquidação externa)
++  // -------------------------------------------------------------------------
++
++  /**
++   * Fecha o commit contábil do lote. É SEMPRE a última coisa a acontecer:
++   * quando há liquidação externa, ela já retornou com sucesso antes daqui.
++   */
++  async function closeBatch(batch, context) {
++    const result = await inTransaction((transaction) => (
++      payout.payApprovedInstallments(batch.installmentIds, transaction)
++    ));
++
++    // Conferência de conciliação, não recálculo: o total que o service gravou
++    // tem que bater com o total que o job selecionou (e eventualmente já
++    // transferiu). Divergência aqui é bug, e precisa aparecer.
++    if (result.totalAmount !== batch.totalAmount) {
++      log.error('[commission-job] divergência entre lote selecionado e lote pago', {
++        ...context,
++        salesAgentId: batch.salesAgentId,
++        batchId: result.batchId,
++        selectedAmount: batch.totalAmount,
++        paidAmount: result.totalAmount,
++      });
++    }
+ 
+-    const { agent, installments, total } = grouped[agentId];
++    return result;
++  }
+ 
+-    if (!agent.pixKey) {
+-      console.log("⚠️ Vendedor sem PIX cadastrado:", agent.id);
+-      continue;
++  /**
++   * @param {object}   options
++   * @param {'none'|'external'|'accounting'} options.settlement  ver cabeçalho
++   * @param {Function} options.transfer  liquidação externa, obrigatória em
++   *        'external'. Assinatura: ({ agent, batch }) => Promise<any>.
++   *        É chamada FORA de qualquer transaction.
++   */
++  async function payoutStage({
++    scope = {},
++    settlement = 'none',
++    transfer = null,
++    referenceLabel = null,
++  } = {}) {
++    const context = { flow: 'commission-job-payout', settlement };
++
++    if (!SETTLEMENT_MODES.includes(settlement)) {
++      throw new CommissionJobError(
++        `settlement inválido: '${settlement}' (use ${SETTLEMENT_MODES.join(' | ')})`,
++        context,
++      );
++    }
++    if (settlement === 'external' && typeof transfer !== 'function') {
++      throw new CommissionJobError(
++        "settlement 'external' exige uma função `transfer` — sem liquidação "
++        + 'externa comprovada nada é marcado como paid',
++        context,
++      );
+     }
+ 
+-    try {
++    const payable = await payout.listPayableInstallments(scope);
++    const contractById = await contractsOf(payable);
++    const { batches, orphanIds } = groupByAgent(payable, contractById, context);
++
++    const agents = batches.length
++      ? await SalesAgent.findAll({ where: { id: batches.map((b) => b.salesAgentId) } })
++      : [];
++    const agentById = new Map(agents.map((a) => [a.id, a]));
++
++    const paid = [];
++    const skipped = [];
++    const errors = [];
++
++    for (const batch of batches) {
++      const agent = agentById.get(batch.salesAgentId) || null;
++      const batchContext = { ...context, salesAgentId: batch.salesAgentId };
++
++      // -- 'none': o ponto de parada seguro. Só relata a fila. ---------------
++      if (settlement === 'none') {
++        skipped.push({
++          ...batch,
++          reason: 'settlement-none',
++          detail: 'lote pagável e não liquidado: nenhuma liquidação externa '
++            + 'configurada, portanto nada foi marcado como paid',
++        });
++        log.info('[commission-job] lote pagável aguardando liquidação', {
++          ...batchContext,
++          count: batch.count,
++          totalAmount: batch.totalAmount,
++        });
++        continue;
++      }
+ 
+-      await sequelize.transaction(async (t) => {
++      // -- 'external': transferir ANTES, FORA da transaction. ---------------
++      let settlementResult = null;
+ 
+-        // 💸 Transferência via Asaas
+-        await asaasApi.post('/transfers', {
+-          value: total,
+-          operationType: "PIX",
+-          pixAddressKey: agent.pixKey,
+-          description: `Comissão ${lastMonth}`
+-        });
+-
+-        // 🔄 Marcar parcelas como pagas
+-        for (const inst of installments) {
+-          await inst.update({
+-            status: 'paid',
+-            paidAt: new Date()
+-          }, { transaction: t });
++      if (settlement === 'external') {
++        if (!agent) {
++          skipped.push({ ...batch, reason: 'agent-not-found' });
++          log.error('[commission-job] agente do lote não encontrado', batchContext);
++          continue;
++        }
++        if (!agent.pixKey) {
++          skipped.push({ ...batch, reason: 'missing-pix-key' });
++          log.warn('[commission-job] agente sem chave PIX — lote não liquidado', {
++            ...batchContext,
++            count: batch.count,
++            totalAmount: batch.totalAmount,
++          });
++          continue;
+         }
+ 
+-      });
++        try {
++          settlementResult = await transfer({
++            agent,
++            batch: {
++              salesAgentId: batch.salesAgentId,
++              installmentIds: batch.installmentIds,
++              count: batch.count,
++              totalAmount: batch.totalAmount,
++            },
++            referenceLabel,
++          });
++        } catch (error) {
++          // Transferência falhou: NADA é marcado. Os lançamentos continuam
++          // `approved` e voltam à fila na próxima execução — retry seguro,
++          // porque nenhum estado contábil foi tocado.
++          errors.push({
++            stage: 'transfer',
++            salesAgentId: batch.salesAgentId,
++            installmentIds: batch.installmentIds,
++            message: error.message,
++            error,
++          });
++          log.error('[commission-job] liquidação externa falhou — lote segue approved', {
++            ...batchContext,
++            installmentIds: batch.installmentIds,
++            totalAmount: batch.totalAmount,
++            message: error.message,
++          });
++          continue;
++        }
++      }
+ 
+-      console.log(`💰 Pago R$ ${total} para vendedor ${agent.name}`);
++      // -- commit contábil: approved → paid, via service. --------------------
++      try {
++        const result = await closeBatch(batch, batchContext);
++
++        paid.push({
++          salesAgentId: batch.salesAgentId,
++          batchId: result.batchId,
++          count: result.count,
++          totalAmount: result.totalAmount,
++          installmentIds: result.installmentIds,
++          paidAt: result.paidAt,
++          settlement,
++          settlementResult,
++        });
+ 
+-    } catch (error) {
+-      console.error("❌ Erro ao pagar vendedor:", agent.id, error.response?.data || error.message);
++        log.info('[commission-job] lote repassado', {
++          ...batchContext,
++          batchId: result.batchId,
++          count: result.count,
++          totalAmount: result.totalAmount,
++        });
++      } catch (error) {
++        const settled = settlement === 'external';
++
++        errors.push({
++          stage: 'pay',
++          salesAgentId: batch.salesAgentId,
++          installmentIds: batch.installmentIds,
++          message: error.message,
++          // Sinaliza o caso feio: dinheiro saiu e o banco não registrou.
++          externallySettled: settled,
++          settlementResult,
++          error,
++        });
++
++        if (settled) {
++          log.error(
++            '[commission-job] INCONSISTÊNCIA: liquidação externa concluída e '
++            + 'commit contábil falhou — lote segue approved e NÃO pode ser '
++            + 'reprocessado sem conferência manual',
++            {
++              ...batchContext,
++              installmentIds: batch.installmentIds,
++              totalAmount: batch.totalAmount,
++              settlementResult,
++              message: error.message,
++            },
++          );
++        } else {
++          log.error('[commission-job] falha ao fechar lote', {
++            ...batchContext,
++            installmentIds: batch.installmentIds,
++            message: error.message,
++          });
++        }
++      }
+     }
++
++    return {
++      settlement,
++      candidates: payable.length,
++      orphanIds,
++      paid,
++      skipped,
++      errors,
++    };
+   }
++
++  // -------------------------------------------------------------------------
++  // 3. Orquestração
++  // -------------------------------------------------------------------------
++
++  /**
++   * @param {object}  options
++   * @param {object}  options.scope            repassado às listagens do payout
++   *                                           (ex.: { salesAgentCommissionId })
++   * @param {number}  options.approvalHoldDays carência de aprovação (7 = legado)
++   * @param {string}  options.settlement       'none' | 'external' | 'accounting'
++   * @param {Function} options.transfer        liquidação externa (fora da tx)
++   * @param {boolean} options.approve          pular a etapa de aprovação
++   * @param {boolean} options.pay              pular a etapa de repasse
++   * @param {boolean} options.failFast         relançar o primeiro erro no fim
++   */
++  async function run(options = {}) {
++    const {
++      scope = {},
++      approvalHoldDays = DEFAULT_APPROVAL_HOLD_DAYS,
++      settlement = 'none',
++      transfer = null,
++      referenceLabel = null,
++      approve = true,
++      pay = true,
++      failFast = false,
++      now = new Date(),
++    } = options;
++
++    const startedAt = new Date();
++    log.info('[commission-job] início', { settlement, approvalHoldDays });
++
++    const approval = approve
++      ? await approveStage({ scope, approvalHoldDays, now })
++      : null;
++
++    // A fila pagável é relida DEPOIS da aprovação, então o que acabou de ser
++    // aprovado já entra no mesmo ciclo.
++    const repasse = pay
++      ? await payoutStage({ scope, settlement, transfer, referenceLabel })
++      : null;
++
++    const errors = [
++      ...(approval ? approval.errors : []),
++      ...(repasse ? repasse.errors : []),
++    ];
++
++    const result = {
++      startedAt,
++      finishedAt: new Date(),
++      settlement,
++      approval,
++      payout: repasse,
++      errors,
++      ok: errors.length === 0,
++    };
++
++    log.info('[commission-job] fim', {
++      ok: result.ok,
++      approvedBatches: approval ? approval.approved.length : 0,
++      paidBatches: repasse ? repasse.paid.length : 0,
++      errors: errors.length,
++    });
++
++    if (failFast && errors.length) {
++      throw new CommissionJobError(
++        `commissionJob terminou com ${errors.length} erro(s): ${errors[0].message}`,
++        { errors, result },
++      );
++    }
++
++    return result;
++  }
++
++  return { run, approveStage, payoutStage, groupByAgent };
+ }
+ 
+-// ================================
+-// 3️⃣ JOB MASTER
+-// ================================
+-async function runCommissionJob() {
++// ---------------------------------------------------------------------------
++// Liquidação externa via Asaas — o mecanismo que JÁ existia no job antigo,
++// extraído para fora da transaction e para fora do caminho padrão.
++//
++// Não é uma API nova: é o mesmo POST /transfers de antes. Continua NÃO sendo
++// idempotente (ver "LACUNA CONHECIDA" no topo), por isso não é ligado por
++// padrão — quem chamar o job precisa passar este gateway de propósito.
++// ---------------------------------------------------------------------------
++function buildAsaasPixTransfer({ http = null } = {}) {
++  const client = http || require('axios').create({
++    baseURL: process.env.ASAAS_BASE_URL,
++    headers: {
++      'Content-Type': 'application/json',
++      access_token: process.env.ASAAS_API_KEY,
++    },
++  });
+ 
+-  console.log("🚀 Iniciando Commission Job...");
++  return async function asaasPixTransfer({ agent, batch, referenceLabel }) {
++    const response = await client.post('/transfers', {
++      value: Number(batch.totalAmount),
++      operationType: 'PIX',
++      pixAddressKey: agent.pixKey,
++      description: referenceLabel
++        ? `Comissão ${referenceLabel}`
++        : `Comissão — ${batch.count} lançamento(s)`,
++    });
++    return response && response.data ? response.data : null;
++  };
++}
+ 
+-  await approveCommissions();
+-  await processMonthlyPayout();
++// ---------------------------------------------------------------------------
++// Job padrão, amarrado ao registry de models da aplicação. Require preguiçoso
++// pelo mesmo motivo do engine e do payout: permitir carregar o módulo em teste
++// sem subir a conexão de app/models/index.js.
++// ---------------------------------------------------------------------------
++
++let defaultJob = null;
++
++function job() {
++  if (!defaultJob) {
++    defaultJob = buildCommissionJob({ models: require('../models') });
++  }
++  return defaultJob;
++}
+ 
+-  console.log("🏁 Commission Job finalizado");
++function runCommissionJob(options = {}) {
++  return job().run(options);
+ }
+ 
+-module.exports = { runCommissionJob };
++module.exports = {
++  runCommissionJob,
++  buildCommissionJob,
++  buildAsaasPixTransfer,
++  CommissionJobError,
++  DEFAULT_APPROVAL_HOLD_DAYS,
++  SETTLEMENT_MODES,
++};

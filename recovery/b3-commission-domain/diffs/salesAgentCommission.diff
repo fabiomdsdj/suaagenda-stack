@@ -1,0 +1,162 @@
+--- /home/fabiomdsdj/Documents/sistema/suaagenda-stack/api/app/models/salesAgentCommission.js	2026-09-22 13:47:46.659818340 -0300
++++ /tmp/claude-1000/-home-fabiomdsdj-Documents-sistema-suaagenda-stack/64e6588a-5669-4744-810a-80321b962629/scratchpad/b3.27/recover/salesAgentCommission.historico.js	2026-09-22 17:21:04.357920914 -0300
+@@ -1,3 +1,10 @@
++// Contrato de comissão de um agente sobre uma assinatura de um tenant.
++//
++// A partir do modelo de planos (B3.4), a regra vive nas faixas contratadas
++// (SalesAgentCommissionTerm) + basis/tierBasis/totalUnits/hardEndDate.
++// Os campos percent, commissionMonths, totalInstallments, paidInstallments e
++// endDate estão APOSENTADOS: continuam na tabela pelo código legado, mas a
++// nova regra não depende deles.
+ module.exports = (sequelize, DataTypes) => {
+   const SalesAgentCommission = sequelize.define('SalesAgentCommission', {
+     id: {
+@@ -7,10 +14,10 @@
+       allowNull: false,
+     },
+ 
+-    // Percentual negociado com esse agente para esse tenant
++    // ⚠️ DEPRECADO — use as faixas em SalesAgentCommissionTerm
+     percent: {
+       type: DataTypes.DECIMAL(5, 2),
+-      allowNull: false,
++      allowNull: true,
+     },
+ 
+     // Data em que a comissão começa a ser contada (= data da assinatura)
+@@ -19,43 +26,86 @@
+       allowNull: false,
+     },
+ 
+-    // Data calculada: startDate + commissionMonths do SalesAgent
+-    // Ex: startDate = 2025-01-01, commissionMonths = 12 → endDate = 2025-12-31
++    // ⚠️ DEPRECADO — use totalUnits / hardEndDate
+     endDate: {
+       type: DataTypes.DATEONLY,
+-      allowNull: false,
++      allowNull: true,
+     },
+ 
+-    // Quantos meses de comissão esse agente tem direito (copiado do SalesAgent no momento da criação)
+-    // Guardamos aqui para ter histórico, já que o valor no SalesAgent pode mudar
++    // ⚠️ DEPRECADO — use totalUnits
+     commissionMonths: {
+       type: DataTypes.INTEGER,
+-      allowNull: false,
++      allowNull: true,
+     },
+ 
+-    // Quantas parcelas já foram pagas ao agente
++    // ⚠️ DEPRECADO — derivado das parcelas
+     paidInstallments: {
+       type: DataTypes.INTEGER,
+       defaultValue: 0,
+       allowNull: false,
+     },
+ 
+-    // Total de parcelas que o agente vai receber
+-    // Plano mensal → igual a commissionMonths
+-    // Plano anual  → 1 parcela (valor = percent * 12 meses de receita)
+-    // Plano trimestral → commissionMonths / 3 parcelas
++    // ⚠️ DEPRECADO — derivado das parcelas
+     totalInstallments: {
+       type: DataTypes.INTEGER,
+-      allowNull: false,
++      allowNull: true,
+     },
+ 
+-    // Status: pending | active | completed | cancelled
+     status: {
+-      type: DataTypes.ENUM('pending', 'active', 'completed', 'cancelled'),
++      type: DataTypes.ENUM('active', 'suspended', 'completed', 'cancelled'),
+       defaultValue: 'active',
+       allowNull: false,
+     },
+ 
++    // --- Snapshot das regras de topo, copiado do plano na contratação ---
++
++    commissionPlanId: {
++      type: DataTypes.UUID,
++      allowNull: true,
++      references: { model: 'commission_plans', key: 'id' },
++    },
++
++    basis: {
++      type: DataTypes.ENUM('billing_month', 'payment'),
++      allowNull: false,
++      defaultValue: 'billing_month',
++    },
++
++    // 'volume' reservado, não implementado neste ciclo
++    tierBasis: {
++      type: DataTypes.ENUM('sequence', 'volume'),
++      allowNull: false,
++      defaultValue: 'sequence',
++    },
++
++    // NULL = ilimitado
++    totalUnits: {
++      type: DataTypes.INTEGER,
++      allowNull: true,
++    },
++
++    // Corte duro opcional: nada é gerado depois dessa data
++    hardEndDate: {
++      type: DataTypes.DATEONLY,
++      allowNull: true,
++    },
++
++    // direct   = agente que vendeu
++    // override = comissão do agente pai sobre a mesma venda
++    kind: {
++      type: DataTypes.ENUM('direct', 'override'),
++      allowNull: false,
++      defaultValue: 'direct',
++    },
++
++    // Contrato direct que originou esse override.
++    // A lógica pai/filho NÃO é implementada neste ciclo.
++    parentCommissionId: {
++      type: DataTypes.UUID,
++      allowNull: true,
++      references: { model: 'sales_agent_commissions', key: 'id' },
++    },
++
+     // FKs
+     salesAgentId: {
+       type: DataTypes.UUID,
+@@ -90,6 +140,27 @@
+       as: 'signature',
+     });
+ 
++    SalesAgentCommission.belongsTo(models.CommissionPlan, {
++      foreignKey: 'commissionPlanId',
++      as: 'commissionPlan',
++    });
++
++    // Snapshot imutável das faixas contratadas
++    SalesAgentCommission.hasMany(models.SalesAgentCommissionTerm, {
++      foreignKey: 'salesAgentCommissionId',
++      as: 'terms',
++    });
++
++    // Hierarquia direct → override
++    SalesAgentCommission.belongsTo(SalesAgentCommission, {
++      foreignKey: 'parentCommissionId',
++      as: 'parentCommission',
++    });
++    SalesAgentCommission.hasMany(SalesAgentCommission, {
++      foreignKey: 'parentCommissionId',
++      as: 'childCommissions',
++    });
++
+     // Parcelas individuais geradas para esse agente nessa comissão
+     SalesAgentCommission.hasMany(models.SalesAgentCommissionInstallment, {
+       foreignKey: 'salesAgentCommissionId',
+@@ -98,4 +169,4 @@
+   };
+ 
+   return SalesAgentCommission;
+-};
+\ No newline at end of file
++};
